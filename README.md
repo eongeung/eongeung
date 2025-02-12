@@ -68,7 +68,7 @@
 
 <div align="center">
   <a href="https://solved.ac/yh1022">
-    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" style="margin-right: 60px;" />
+    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" />&nbsp;
   </a>
   <a href="https://github.com/eongeung/github-readme-stats">
     <img src="https://github-readme-stats.vercel.app/api?username=eongeung" />
