@@ -74,7 +74,7 @@
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/eongeung/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=date_night" />
+    <img src="https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=catppuccin_mocha" />
   </a>
   
 </div>
