@@ -8,11 +8,13 @@
 <br>
 <div align="center">
   <a href="mailto:iyoungheuni@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp;
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
+  &nbsp;
   <a href="https://www.instagram.com/_eyoung1022/">
-    <img src="https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white"/>&nbsp;
+    <img src="https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white"/>
   </a>
+  &nbsp;
 </div>
       
 <br>
@@ -68,8 +70,9 @@
 
 <div align="center">
   <a href="https://solved.ac/yh1022">
-    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" />&nbsp;&nbsp;&nbsp;
+    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" />
   </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/eongeung/github-readme-stats">
     <img src="https://github-readme-stats.vercel.app/api?username=eongeung" />
   </a>
