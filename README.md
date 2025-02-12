@@ -1,6 +1,5 @@
 ## Hi there 👋
-![footer](https://capsule-render.vercel.app/api?section=footer)
-![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&section=header&text=Yeong%20Heun's-nl-GitHub&fontSize=80)
+![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&section=header&text=Yeong%20Heun's-nl-GitHub&fontSize=80&textBg=true&)
 
 <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
 ![header](https://capsule-render.vercel.app/api?color=gradient&customColorList=0,2,2,5,30)
