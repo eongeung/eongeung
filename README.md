@@ -68,5 +68,7 @@
 
 [![Solved.ac
 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung)](https://github.com/eongeung/github-readme-stats)
+
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=eongeung)](https://github.com/eongeung/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung)](https://github.com/eongeung/github-readme-stats)
