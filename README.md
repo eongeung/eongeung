@@ -5,6 +5,7 @@
 ---
 <br><br>
 <h3 align="center"> 📬 Contact Information 📬 </h3>
+<br>
 <div align="center">
   <a href="mailto:iyoungheuni@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp;
@@ -20,6 +21,7 @@
 
 <br><br>
 <h3 align="center">🧑‍💻 Tech Stack 🧑‍💻</h3>
+<br>
 <div align="center">
   <img src="https://img.shields.io/badge/C-20232a.svg?style=for-the-badge&logo=C&logoColor=61DAFB" />&nbsp;
   <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />&nbsp;
@@ -36,6 +38,7 @@
 
 <br><br>
 <h3 align="center">📖 Studying 📖</h3>
+<br>
 <div align="center">
   <img src="https://img.shields.io/badge/Spring-6DB33F.svg?style=for-the-badge&logo=Spring&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=Spring%20Boot&logoColor=white" />&nbsp;
@@ -47,6 +50,7 @@
 
 <br><br>
 <h3 align="center">🛠 Tools & Resources 🛠</h3>
+<br>
 <div align="center">
   <img src="https://img.shields.io/badge/git-F05033.svg?style=for-the-badge&logo=git&logoColor=white" />&nbsp;
   <img src="https://img.shields.io/badge/github-181717.svg?style=for-the-badge&logo=github&logoColor=white" />&nbsp;
