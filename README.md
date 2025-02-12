@@ -65,3 +65,6 @@
 <br>
 
 ---
+
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)
