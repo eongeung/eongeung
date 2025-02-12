@@ -68,13 +68,12 @@
 
 <div align="center">
   <a href="https://solved.ac/yh1022">
-    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" />
+    <img src="http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022" style="margin-right: 20px;" />
   </a>
-
-  
   <a href="https://github.com/eongeung/github-readme-stats">
     <img src="https://github-readme-stats.vercel.app/api?username=eongeung" />
   </a>
 </div>
+
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung)](https://github.com/eongeung/github-readme-stats)
