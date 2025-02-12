@@ -4,7 +4,7 @@
 
 ---
 
-## 📬 Contact Information 📬
+## 📬 Contact Information
 <div align="center">
   <a href="mailto:iyoungheuni@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp;
@@ -13,8 +13,6 @@
     <img src="https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white"/>&nbsp;
   </a>
 </div>
-
----
 
 <h3 align="center">✨ Tech Stack ✨</h3>
 <div align="center">
