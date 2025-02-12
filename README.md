@@ -79,4 +79,4 @@
   
 </div>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung&layout=compact)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung&layout=compact&theme=catppuccin_mocha)
