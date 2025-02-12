@@ -3,7 +3,7 @@
 #### 👤 이영흔 (Yeong Heun)
 
 ---
-<br>
+
 <h3 align="center"> 📬 Contact Information 📬 </h3>
 <br>
 <div align="center">
@@ -19,7 +19,7 @@
       
 ---
 
-<br>
+
 <h3 align="center">🧑‍💻 Tech Stack 🧑‍💻</h3>
 <br>
 <div align="center">
@@ -36,7 +36,7 @@
 
 ---
 
-<br>
+
 <h3 align="center">📖 Studying 📖</h3>
 <br>
 <div align="center">
@@ -48,7 +48,7 @@
 
 ---
 
-<br>
+
 <h3 align="center">🛠 Tools & Resources 🛠</h3>
 <br>
 <div align="center">
