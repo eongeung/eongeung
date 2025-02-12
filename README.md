@@ -1,3 +1,9 @@
+![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&section=header&text=Yeong%20Heun's-nl-GitHub&fontSize=80&animation=twinkling)
+
+## 👤 이영흔 (Yeong Heun)
+
+---
+
 ## 📬 Contact Information 📬
 <div align="center">
   <a href="mailto:iyoungheuni@gmail.com">
@@ -7,10 +13,6 @@
     <img src="https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white"/>&nbsp;
   </a>
 </div>
-
-## 👤 Name: 이영흔
-
-![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&section=header&text=Yeong%20Heun's%20GitHub&fontSize=80&animation=twinkling)
 
 ---
 
@@ -52,4 +54,3 @@
 </div>
 
 ---
-
