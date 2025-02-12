@@ -49,7 +49,7 @@
   <a href="mailto:iyoungheuni@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>&nbsp
   </a>
-  <a href="instagramto:_eyoung1022">
+  <a href="instagramto:@_eyoung1022">
     <img src="https://img.shields.io/badge/instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white"/>&nbsp
   </a>
 </div>
