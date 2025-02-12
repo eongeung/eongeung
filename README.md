@@ -74,11 +74,9 @@
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/eongeung/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=radical" />
+    <img src="https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=date_night" />
   </a>
   
 </div>
-
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=radical)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung)](https://github.com/eongeung/github-readme-stats)
