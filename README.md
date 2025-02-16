@@ -14,9 +14,9 @@
 ### 🧑‍💻 Tech Stack 🧑‍💻  
 ![C](https://img.shields.io/badge/C-20232a.svg?style=for-the-badge&logo=C&logoColor=61DAFB) 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
-![JavaScript](https://img.shields.io/badge/javascript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=20232a) 
+<!--![JavaScript](https://img.shields.io/badge/javascript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=20232a) 
 ![HTML5](https://img.shields.io/badge/html5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![CSS3](https://img.shields.io/badge/css-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
+![CSS3](https://img.shields.io/badge/css-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  -->
 ![Django](https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=django&logoColor=white) 
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android%20Studio&logoColor=white) 
 ![Arduino](https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=arduino&logoColor=white)  
