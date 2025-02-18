@@ -46,4 +46,3 @@
 
 ---
 
-![코딩 시간대 분석](https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=radical)
