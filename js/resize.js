@@ -1,16 +1,14 @@
 function resizeIframe(iframe) {
-  iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+  const doc = iframe.contentWindow.document;
+  if (doc.readyState === 'complete') {
+    iframe.style.height = doc.body.scrollHeight + 'px';
+  }
 }
 
 window.addEventListener("load", () => {
-  const aboutFrame = document.getElementById("aboutFrame");
-  const contactFrame = document.getElementById("contactFrame");
+  const frames = document.querySelectorAll("iframe");
 
-  if (aboutFrame) {
-    aboutFrame.onload = () => resizeIframe(aboutFrame);
-  }
-  if (contactFrame) {
-    contactFrame.onload = () => resizeIframe(contactFrame);
-  }
+  frames.forEach((frame) => {
+    frame.onload = () => resizeIframe(frame);
+  });
 });
-
