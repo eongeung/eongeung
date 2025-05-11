@@ -1,8 +1,6 @@
 function resizeIframe(iframe) {
   const doc = iframe.contentWindow.document;
-  if (doc.readyState === 'complete') {
-    iframe.style.height = doc.body.scrollHeight + 'px';
-  }
+  iframe.style.height = doc.body.scrollHeight + "px";
 }
 
 window.addEventListener("load", () => {
