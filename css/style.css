@@ -7,7 +7,11 @@ html, body {
   background-color: #fdfdfd;
   color: #333;
 }
-
+p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
 h1 {
   color: #007acc;
