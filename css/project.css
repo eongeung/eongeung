@@ -1,0 +1,36 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 40px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #007acc;
+}
+
+.project {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project:hover {
+  background: #eef6fb;
+}
+
+.description {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+}
+
+a {
+  display: inline-block;
+  margin-top: 30px;
+  color: #007acc;
+  text-decoration: none;
+}
