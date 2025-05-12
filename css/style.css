@@ -3,7 +3,6 @@ html, body {
   margin: 40px;
   padding: 20px;
   overflow-x: hidden; 
-  overflow-y: auto; 
   background-color: #fdfdfd;
   color: #333;
   scroll-behavior: smooth;
