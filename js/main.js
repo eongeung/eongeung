@@ -1,15 +1,10 @@
-window.onscroll = function () {
+window.addEventListener("scroll", () => {
     const btn = document.getElementById("toTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
+    btn.style.display = window.scrollY > 150 ? "block" : "none";
+  });
   
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("toTopBtn");
-    btn.addEventListener("click", function () {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("toTopBtn").addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   });
