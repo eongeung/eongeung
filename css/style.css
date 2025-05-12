@@ -137,11 +137,11 @@ a:hover {
 }
 
 .tech-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 30px;
   color: #007acc;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .tech-subtitle {
