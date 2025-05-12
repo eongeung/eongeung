@@ -12,7 +12,10 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  word-break: keep-all;
+  line-break: anywhere;
 }
+
 
 h1 {
   color: #007acc;
