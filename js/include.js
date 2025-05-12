@@ -14,11 +14,12 @@ window.addEventListener('load', function () {
           el.outerHTML = this.responseText;
           includeCount++;
 
+          // include 완료 후 해시 스크롤 처리
           if (includeCount === totalIncludes && window.location.hash) {
             const target = document.querySelector(window.location.hash);
             if (target) {
               setTimeout(() => {
-                target.scrollIntoView({ behavior: 'smooth' });
+                target.scrollIntoView({ behavior: "smooth" });
               }, 100);
             }
           }
