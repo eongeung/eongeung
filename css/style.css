@@ -9,6 +9,7 @@ html, body {
   scroll-behavior: smooth;
   text-align: center;
   font-size: 18px;
+  padding-top: 80px;
 }
 
 nav {
