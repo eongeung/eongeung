@@ -28,7 +28,7 @@ a:hover {
 }
 
 #toTopBtn {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 30px;
   right: 30px;
