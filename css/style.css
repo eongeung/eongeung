@@ -6,6 +6,7 @@ html, body {
   overflow-y: auto; 
   background-color: #fdfdfd;
   color: #333;
+  scroll-behavior: smooth;
 }
 p {
   display: flex;
