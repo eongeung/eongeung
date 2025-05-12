@@ -21,9 +21,21 @@ h1 {
   color: #007acc;
 }
 
+strong {
+  word-break: keep-all;
+  line-break: anywhere;
+}
+
+span {
+  word-break: keep-all;
+  line-break: anywhere;
+}
+
 a {
   color: #007acc;
   text-decoration: none;
+  word-break: keep-all;
+  line-break: anywhere;
 }
 
 a:hover {
