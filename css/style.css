@@ -1,5 +1,6 @@
 html, body {
   font-family: 'Arial', sans-serif;
+  padding-top: 60px;
   margin: 40px;
   padding: 20px;
   overflow-x: hidden; 
@@ -11,8 +12,10 @@ html, body {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: #ffffff;
   padding: 12px 0;
   z-index: 1000;
