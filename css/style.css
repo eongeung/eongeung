@@ -14,6 +14,7 @@ p {
   gap: 10px;
   word-break: keep-all;
   line-break: anywhere;
+  line-height: 1.9;
 }
 
 
