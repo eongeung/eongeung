@@ -140,3 +140,9 @@ a:hover {
 .tech-grid img:hover {
   transform: scale(1.1);
 }
+
+nav a.active {
+  border-bottom: 3px solid #007acc;
+  color: #007acc;
+  font-weight: 700;
+}
