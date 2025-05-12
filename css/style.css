@@ -32,8 +32,8 @@ a:hover {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -44,12 +44,12 @@ a:hover {
 }
 
 #toTopBtn img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   vertical-align: middle;
 }
 
 #toTopBtn:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
