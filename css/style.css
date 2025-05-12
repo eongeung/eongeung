@@ -25,3 +25,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+section:nth-of-type(even) {
+  background-color: #f4f7fb;
+}
