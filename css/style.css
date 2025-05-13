@@ -283,4 +283,18 @@ body.dark-mode a {
   color: #90caf9;
 }
 
+.lang-btn {
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
 
