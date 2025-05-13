@@ -31,7 +31,7 @@ nav a {
 }
 
 nav a.active {
-  border-bottom: 3px solid  #0f3853;
+  border-bottom: 3px solid #0f3853;
   color: #0f3853;
 }
 
@@ -51,20 +51,22 @@ p {
 }
 
 h1 {
-  color:  #0f3853;
+  color: #0f3853;
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 20px;
   text-align: center;
 }
 
-strong, span, a {
+strong,
+span,
+a {
   word-break: keep-all;
   line-break: anywhere;
 }
 
 a {
-  color:  #0f3853;
+  color: #0f3853;
   text-decoration: none;
   font-weight: 600;
 }
@@ -87,12 +89,12 @@ a:hover {
   transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 999;
   padding: 0;
-  overflow: hidden; 
-  background-color: transparent; 
+  overflow: hidden;
+  background-color: transparent;
 }
 
 #toTopBtn img {
-  width: 100%;  
+  width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
@@ -124,7 +126,7 @@ a:hover {
   display: block;
   text-align: center;
   margin-top: 50px;
-  color:  #0f3853;
+  color: #0f3853;
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -137,7 +139,7 @@ a:hover {
 }
 
 .tech-title {
-  color:  #0f3853;
+  color: #0f3853;
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 20px;
@@ -162,7 +164,7 @@ a:hover {
   padding: 12px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: transform 0.2s ease;
 }
 
@@ -190,7 +192,7 @@ a:hover {
   margin-bottom: 1rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid rgba(255,255,255,0.75);
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
   animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
   width: 0;
 }
@@ -204,18 +206,37 @@ a:hover {
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: white;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .background-wrapper {
@@ -254,6 +275,7 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+
 .dark-toggle-btn {
   position: fixed;
   top: 20px;
@@ -270,27 +292,29 @@ html {
 .dark-toggle-btn:hover {
   transform: scale(1.2);
 }
+
 body.dark-mode {
   background-color: #121212;
   color: #a8a8a8;
 }
+
 body.dark-mode .main-content {
   background-color: #1e1e1e;
-  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 body.dark-mode a {
   color: #90caf9;
 }
+
 .lang-btn {
-      margin-bottom: 20px;
-      padding: 8px 16px;
-      font-size: 14px;
-      cursor: pointer;
-    }
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-    .about-text {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
+.about-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
