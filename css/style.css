@@ -11,6 +11,14 @@ body {
   font-size: 18px;
 }
 
+.description a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+
 nav {
   position: fixed;
   top: 0;
