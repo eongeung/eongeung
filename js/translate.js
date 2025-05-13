@@ -1,28 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const includes = document.querySelectorAll("[data-include-path]");
-  let loadedCount = 0;
-
-  includes.forEach((el) => {
-    const path = el.getAttribute("data-include-path");
-
-    fetch(path)
-      .then((res) => res.text())
-      .then((data) => {
-        el.innerHTML = data;
-        loadedCount++;
-        if (loadedCount === includes.length) {
-          initTranslate();
-        }
-      });
-  });
-});
-
-function initTranslate() {
+window.addEventListener("includesLoaded", function () {
   const btn = document.getElementById("langToggle");
   const ko = document.getElementById("about-ko");
   const en = document.getElementById("about-en");
 
-  if (!btn || !ko || !en) return;
+  if (!btn || !ko || !en) {
+    console.log("실행", { btn, ko, en });
+    return;
+  }
 
   btn.addEventListener("click", () => {
     const isKoVisible = ko.style.display !== "none";
@@ -37,4 +21,4 @@ function initTranslate() {
       btn.textContent = "EN 🇺🇸";
     }
   });
-}
+});

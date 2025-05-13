@@ -11,13 +11,17 @@ window.addEventListener('load', function () {
           el.innerHTML = this.responseText;
           el.removeAttribute("data-include-path");
           loadedCount++;
-          if (loadedCount === allElements.length && window.location.hash) {
-            const target = document.querySelector(window.location.hash);
-            if (target) {
-              setTimeout(() => {
-                target.scrollIntoView({ behavior: "smooth" });
-              }, 100);
+
+          if (loadedCount === allElements.length) {
+            if (window.location.hash) {
+              const target = document.querySelector(window.location.hash);
+              if (target) {
+                setTimeout(() => {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }
             }
+            window.dispatchEvent(new Event("includesLoaded"));
           }
         }
       };
