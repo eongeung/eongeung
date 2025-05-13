@@ -6,7 +6,7 @@ window.onload = function () {
   const en = document.getElementById("about-en");
 
   if (!btn || !ko || !en) {
-    console.warn("2차오류류", { btn, ko, en });
+    console.log("2차오류류", { btn, ko, en });
     return;
   }
 
