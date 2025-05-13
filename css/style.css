@@ -254,3 +254,20 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+.dark-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+
+.dark-toggle-btn:hover {
+  transform: scale(1.2);
+}
+
