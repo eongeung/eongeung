@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  color: #007acc;
+  color: #0f3853;
 }
 
 .project {
@@ -31,6 +31,6 @@ h1 {
 a {
   display: inline-block;
   margin-top: 30px;
-  color: #007acc;
+  color:  #0f3853;
   text-decoration: none;
 }
