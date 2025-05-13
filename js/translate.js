@@ -22,8 +22,7 @@ function initTranslate() {
   const ko = document.getElementById("about-ko");
   const en = document.getElementById("about-en");
 
-  if (!btn || !ko || !en) {
-    console.log("오류류")} return;
+  if (!btn || !ko || !en) return;
 
   btn.addEventListener("click", () => {
     const isKoVisible = ko.style.display !== "none";
