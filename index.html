@@ -12,10 +12,15 @@
   <meta property="og:image" content="https://eongeung.github.io/eongeung/assets/images/pp.jpg">
   <meta property="og:url" content="https://eongeung.github.io/eongeung/index.html">
   <meta property="og:type" content="website">
-
 </head>
 
 <body>
+  <div class="background-wrapper">
+    <div class="side"></div>
+    <div class="middle"></div>
+    <div class="side"></div>
+  </div>
+
   <nav>
     <strong>
       <a href="#about">About</a><span> | </span>
@@ -31,12 +36,13 @@
     <p>무엇이든 도전해보는 걸 좋아합니다.</p>
   </div>
 
-
-  <section id="about" data-include-path="pages/about.html"></section>
-  <section id="techstack" data-include-path="pages/techstack.html"></section>
-  <section id="career" data-include-path="pages/career.html"></section>
-  <section id="projects" data-include-path="pages/projects.html"></section>
-  <section id="contact" data-include-path="pages/contact.html"></section>
+  <div class="main-content">
+    <section id="about" data-include-path="pages/about.html"></section>
+    <section id="techstack" data-include-path="pages/techstack.html"></section>
+    <section id="career" data-include-path="pages/career.html"></section>
+    <section id="projects" data-include-path="pages/projects.html"></section>
+    <section id="contact" data-include-path="pages/contact.html"></section>
+  </div>
 
   <button id="toTopBtn" title="top">
     <img src="assets/images/top.png" />
@@ -46,8 +52,6 @@
   <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
   <script src="js/navActive.js"></script>
-
-
 </body>
 
 </html>
