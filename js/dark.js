@@ -3,17 +3,17 @@ const darkbtn = document.getElementById('darkModeToggle');
 
   if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
-    btn.textContent = 'OFF';
+    darkbtn.textContent = 'OFF';
   }
 
-  btn.addEventListener('click', () => {
+  darkbtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
 
     if (body.classList.contains('dark-mode')) {
-      btn.textContent = 'OFF';
+      darkbtn.textContent = 'OFF';
       localStorage.setItem('theme', 'dark');
     } else {
-      btn.textContent = 'ON';
+      darkbtn.textContent = 'ON';
       localStorage.setItem('theme', 'light');
     }
 });
