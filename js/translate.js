@@ -1,15 +1,22 @@
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("includesLoaded", function () {
   const btn = document.getElementById("langToggle");
   const ko = document.querySelector('[id$="-ko"]');
   const en = document.querySelector('[id$="-en"]');
 
   if (!btn || !ko || !en) return;
 
+
   btn.addEventListener("click", () => {
     const isKoVisible = ko.style.display !== "none";
 
-    ko.style.display = isKoVisible ? "none" : "block";
-    en.style.display = isKoVisible ? "block" : "none";
-    btn.textContent = isKoVisible ? "KR 🇰🇷" : "EN 🇺🇸";
+    if (isKoVisible) {
+      ko.style.display = "none";
+      en.style.display = "block";
+      btn.textContent = "KR 🇰🇷";
+    } else {
+      ko.style.display = "block";
+      en.style.display = "none";
+      btn.textContent = "EN 🇺🇸";
+    }
   });
 });
