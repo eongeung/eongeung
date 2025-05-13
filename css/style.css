@@ -325,14 +325,3 @@ body.dark-mode a {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
-.about-text {
-  font-size: 17px;
-  line-height: 1.75;
-  color: #222;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  text-align: justify;
-  font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
-}
