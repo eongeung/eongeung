@@ -1,4 +1,4 @@
-const btn = document.getElementById('darkModeToggle');
+const darkbtn = document.getElementById('darkModeToggle');
   const body = document.body;
 
   if (localStorage.getItem('theme') === 'dark') {

@@ -1,4 +1,4 @@
-const btn = document.getElementById("langToggle");
+const langbtn = document.getElementById("langToggle");
 const ko = document.getElementById("about-ko");
 const en = document.getElementById("about-en");
 
