@@ -375,3 +375,22 @@ body.dark-mode a {
     font-size: 14px;
   }
 }
+
+.license-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.license-section h2 {
+  font-size: 1.4rem;
+  margin-top: 30px;
+  color: #0f3853;
+}
+
+.license-section ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2;
+}
