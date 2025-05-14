@@ -93,20 +93,18 @@ a:hover {
   border: 0;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 999;
   padding: 0;
-  overflow: hidden;
-  background-color: transparent;
+  overflow: hidden; 
+  background-color: transparent; 
 }
 
 #toTopBtn img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
-  background: transparent;
+
 }
 
 #toTopBtn:hover {
