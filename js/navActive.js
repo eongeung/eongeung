@@ -6,8 +6,8 @@ window.addEventListener("includesLoaded", () => {
     let current = "";
 
     sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      if (window.pageYOffset >= sectionTop) {
+      const sectionTop = section.offsetTop - 150;
+      if (window.scrollY >= sectionTop) {
         current = section.getAttribute("id");
       }
     });
@@ -24,8 +24,12 @@ window.addEventListener("includesLoaded", () => {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      setTimeout(updateActiveLink, 50); 
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+
+      setTimeout(updateActiveLink, 300);
     });
   });
+
   updateActiveLink();
 });
