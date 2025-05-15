@@ -62,36 +62,43 @@ body {
   color: #444;
 }
 
-/* License Section */
-.license-section {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.license-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.license-card {
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  background: white;
+  border-left: 6px solid #0f3853;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: left;
 }
 
-.license-section h2 {
+.license-card h3 {
+  font-size: 1.2rem;
   color: #0f3853;
-  font-size: 1.5rem;
-  margin-top: 30px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
-.license-section ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.license-section li {
+.license-card p {
   font-size: 1rem;
-  color: #333;
-  margin-bottom: 10px;
+  color: #444;
 }
 
-.license-section .planned li {
-  color: #888;
+.license-card.planned {
+  border-color: #aaa;
   font-style: italic;
+  color: #888;
 }
+
 
 @media (max-width: 768px) {
   .experience-section h1,
