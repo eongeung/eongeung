@@ -62,8 +62,40 @@ body {
   color: #444;
 }
 
+/* License Section */
+.license-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.license-section h2 {
+  color: #0f3853;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
+.license-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.license-section li {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.license-section .planned li {
+  color: #888;
+  font-style: italic;
+}
+
 @media (max-width: 768px) {
-  .experience-section h1 {
+  .experience-section h1,
+  .license-section h1 {
     font-size: 2rem;
   }
 
@@ -71,8 +103,8 @@ body {
     font-size: 1.1rem;
   }
 
-  .experience-entry p {
+  .experience-entry p,
+  .license-section li {
     font-size: 0.95rem;
   }
 }
-
