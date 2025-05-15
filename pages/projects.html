@@ -12,12 +12,12 @@
 
   <h1><br><br><br>Projects<br><br><br></h1>
 
-  <div class="filter-buttons">
-    <button data-year="all">All</button>
-    <button data-year="2023">2023</button>
-    <button data-year="2024">2024</button>
-    <button data-year="2025">2025</button>
-  </div>
+  <select id="yearFilter">
+    <option value="all">전체</option>
+    <option value="2023">2023</option>
+    <option value="2024">2024</option>
+    <option value="2025">2025</option>
+  </select>
 
   <div class="project" data-year="2023" onclick="toggle(this)">
     <strong>Hanpiece (2023)</strong>
@@ -66,7 +66,7 @@
   <div class="project" data-year="2024" onclick="toggle(this)">
     <strong>Iruri (2024)</strong>
     <a href="https://github.com/eongeung/irui" target="_blank">
-      <img src="assets/images/github.svg" alt="github"/>
+      <img src="assets/images/github.svg" alt="github" />
     </a>
     <div class="description">
       청각장애인을 위한 진동 기반 화재 알림 모바일 앱.

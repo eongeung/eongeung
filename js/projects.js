@@ -1,25 +1,14 @@
-function toggle(element) {
-  const desc = element.querySelector('.description');
-  const isOpen = desc.style.display === 'block';
+document.getElementById("yearFilter").addEventListener("change", function () {
+  const selectedYear = this.value;
 
-  document.querySelectorAll('.description').forEach(d => d.style.display = 'none');
-
-  desc.style.display = isOpen ? 'none' : 'block';
-}
-
-window.toggle = toggle;
-
-document.querySelectorAll('.filter-buttons button').forEach(button => {
-  button.addEventListener('click', () => {
-    const year = button.getAttribute('data-year');
-    document.querySelectorAll('.project').forEach(project => {
-      if (year === 'all' || project.getAttribute('data-year') === year) {
-        project.style.display = 'block';
-      } else {
-        project.style.display = 'none';
-      }
-    });
-
-    document.querySelectorAll('.description').forEach(d => d.style.display = 'none');
+  document.querySelectorAll(".project").forEach(project => {
+    const projectYear = project.getAttribute("data-year");
+    if (selectedYear === "all" || projectYear === selectedYear) {
+      project.style.display = "block";
+    } else {
+      project.style.display = "none";
+    }
   });
+
+  document.querySelectorAll(".description").forEach(d => d.style.display = "none");
 });
