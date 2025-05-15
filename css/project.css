@@ -20,10 +20,10 @@ h1 {
 
 
 .project strong + a img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   vertical-align: middle;
-  margin-left: 8px;
+  margin-left: 30px;
 }
 
 .project:hover {
