@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("includesLoaded", () => {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("nav a");
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop - 100;
-      if (pageYOffset >= sectionTop) {
+      if (window.pageYOffset >= sectionTop) {
         current = section.getAttribute("id");
       }
     });
