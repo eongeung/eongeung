@@ -7,6 +7,8 @@ function toggle(element) {
   desc.style.display = isOpen ? 'none' : 'block';
 }
 
+window.toggle = toggle;
+
 document.querySelectorAll('.filter-buttons button').forEach(button => {
   button.addEventListener('click', () => {
     const year = button.getAttribute('data-year');
