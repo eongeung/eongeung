@@ -109,9 +109,18 @@ body {
   .experience-entry h2 {
     font-size: 1.1rem;
   }
+  
+  .license-card {
+    flex: 0 0 80%;
+    padding: 16px;
+  }
+
+  .license-card h3 {
+    font-size: 1.05rem;
+  }
 
   .experience-entry p,
-  .license-section li {
+  .license-section p {
     font-size: 0.95rem;
   }
 }
