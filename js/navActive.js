@@ -2,7 +2,7 @@ window.addEventListener("includesLoaded", () => {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll("nav a");
 
-  window.addEventListener("scroll", () => {
+  function updateActiveLink() {
     let current = "";
 
     sections.forEach((section) => {
@@ -18,12 +18,14 @@ window.addEventListener("includesLoaded", () => {
         link.classList.add("active");
       }
     });
-  });
+  }
+
+  window.addEventListener("scroll", updateActiveLink);
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navLinks.forEach((l) => l.classList.remove("active"));
-      link.classList.add("active");
+      setTimeout(updateActiveLink, 50); 
     });
   });
+  updateActiveLink();
 });
