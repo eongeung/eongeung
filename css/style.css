@@ -30,17 +30,6 @@ nav a {
   transition: all 0.2s ease;
 }
 
-nav a.active {
-  border-bottom: 3px solid #0f3853;
-  color: #0f3853;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
 p {
   display: flex;
   flex-wrap: wrap;
