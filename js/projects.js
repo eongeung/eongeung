@@ -19,3 +19,8 @@ function initProjectFilter() {
     });
   });
 }
+
+window.addEventListener("includesLoaded", function () {
+  initProjectFilter();
+});
+
