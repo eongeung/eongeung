@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     height: 100vh;
     background: url('../assets/images/aurorabg.png') no-repeat center center/cover;
     display: flex;
@@ -12,34 +12,39 @@ body {
     align-items: center;
     color: white;
     text-shadow: 0 0 5px black;
-}
-.big-title {
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .big-title {
     font-size: 7rem;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.typing {
+  }
+  
+  .typing {
     font-size: 2rem;
-    border-right: .15em solid white;
+    border-right: 0.15em solid white;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 3s steps(30, end) forwards, blink .75s step-end infinite;
-}
-
-@keyframes typing {
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
     from {
-        width: 0
+      width: 0;
     }
-
     to {
-        width: 100%
+      width: 100%;
     }
-}
-
-@keyframes blink {
+  }
+  
+  @keyframes blink {
     50% {
-        border-color: transparent
+      border-color: transparent;
     }
-}
+  }
+  
