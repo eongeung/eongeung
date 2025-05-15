@@ -1,0 +1,78 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.experience-section {
+  max-width: 100%;
+  padding: 40px 20px;
+  overflow-x: auto;
+}
+
+.experience-section h1 {
+  color: #0f3853;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.experience-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.experience-entry {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  border-left: 6px solid #0f3853;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.experience-entry h2 {
+  font-size: 1.25rem;
+  color: #0f3853;
+  margin-bottom: 8px;
+}
+
+.experience-entry span {
+  display: block;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.experience-entry p {
+  font-size: 1rem;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .experience-section h1 {
+    font-size: 2rem;
+  }
+
+  .experience-entry h2 {
+    font-size: 1.1rem;
+  }
+
+  .experience-entry p {
+    font-size: 0.95rem;
+  }
+}
+
