@@ -24,6 +24,11 @@
     margin-bottom: 20px;
   }
   
+  .typing-wrapper {
+    height: 3rem; 
+    overflow: hidden;
+  }
+  
   .typing {
     font-size: 2rem;
     border-right: 0.15em solid white;
