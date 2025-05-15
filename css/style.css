@@ -168,11 +168,18 @@ a:hover {
 }
 
 .tech-grid img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
   padding: 12px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease;
+}
+
+.tech-grid img.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tech-grid img:hover {
