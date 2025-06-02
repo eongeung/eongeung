@@ -28,7 +28,7 @@
 | 8 | Home 버튼 클릭 시 새로고침 | Home 클릭 시 페이지 초기화 후 최상단으로 이동합니다. | `contact.html` | href로 index.html을 연결해주었습니다. |
 | 9 | Index 타이핑 애니메이션 | 인덱스 페이지에서 글자가 타이핑 되듯 출력 | `style.css` | keyframes 'typing'을 사용해 텍스트 타이핑 효과를 구현합니다. |
 | 10 | 타이핑 텍스트에 깜빡이는 커서 | 타이핑 애니메이션에 커서 효과를 추가합니다. | `style.css` | keyframes 'blink'를 사용해 계속 입력하는 것 같은 효과를 구현합니다. |
-| 11 | About Me 소개에 링크 삽입 | 본문 중 일부 단어에 하이퍼링크 삽입합니다. | `about.html` | <a href="..."> 태그를 활용합니다. |
+| 11 | About Me 소개에 링크 삽입 | 본문 중 일부 단어에 하이퍼링크 삽입합니다. | `about.html` | `<a href="...">` 태그를 활용합니다. |
 | 12 | About Me 강조 포인트 | 소개글 내 강조할 문장 스타일링 | `about.html` | <strong>으로 bold 처리를 합니다. |
 | 13 | 배경 이미지 고정 | 배경이 스크롤과 함께 움직이지 않도록 설정합니다. | `style.css` | background-attachment에 fixed;로 고정합니다. |
 | 14 | 배경 이미지 흐림 효과 | 배경에 blur 효과를 추가합니다. | `style.css` | filter와 backdrop-filter로 blur 효과를 줍니다. |
@@ -49,12 +49,15 @@
 | 29 | 다크모드 설정 유지 | 새로고침 후에도 이전 테마를 유지합니다. | `dark.js` | localStorage를 사용하여 theme 저장 및 로드합니다. |
 | 30 | 한/영 변환 기능 (About, Career) | 클릭 시 영어/한글 변환 기능 제공합니다. | `translate.js` | 버튼 클릭으로 ko, en을 전환시킵니다. |
 | 31 | 모바일 반응형 레이아웃 | 모바일에서도 깨지지 않는 레이아웃을 구현했습니다. | `style.css` | @media 쿼리를 사용했습니다. |
-| 32 | License 페이지 추가 | 자격증 목록 페이지를 구성했습니다. | `license.html` | <h>와 <div>를 통해 페이지를 보기 좋게 만들었습니다. |
-| 33 | Award 페이지 추가 | 수상 이력 페이지를 추가했습니다. | `award.html` | <h>와 <div>를 통해 페이지를 보기 좋게 만들었습니다. |
-| 34 | Experience 페이지 추가 | 경력 및 활동 정리 페이지를 추가했습니다. | `experience.html` | <h>와 <div>를 통해 페이지를 보기 좋게 만들었습니다. |
+| 32 | License 페이지 추가 | 자격증 목록 페이지를 구성했습니다. | `license.html` | `<h>와 <div>`를 통해 페이지를 보기 좋게 만들었습니다. |
+| 33 | Award 페이지 추가 | 수상 이력 페이지를 추가했습니다. | `award.html` | `<h>와 <div>`를 통해 페이지를 보기 좋게 만들었습니다. |
+| 34 | Experience 페이지 추가 | 경력 및 활동 정리 페이지를 추가했습니다. | `experience.html` | `<h>와 <div>`를 통해 페이지를 보기 좋게 만들었습니다. |
 | 35 | 카드형 UI (License, Award, Experience) | 각 항목을 카드 형태로 표시하였습니다. | `award.css`, `project.css`, `license.html`, `award.html`, `experience.html` | box-shadow, border-radius 등 css를 작업하고, section class license-card 형식으로 css를 받아왔습니다. |
 | 36 | 스크롤 기능 (License, Award, Experience) | 페이지 별 스크롤 이동을 하고 위치를 기억합니다. | `navActive.js` | scrollIntoView 및 scroll 이벤트로 이동 처리하였습니다. |
-| 37 | Favicon 추가 | 브라우저 탭에 표시될 favicon을 추가했습니다. | `index.html` | <link rel
+| 37 | Favicon 추가 | 브라우저 탭에 표시될 favicon을 추가했습니다. | `index.html` | `<link rel=>`을 통하여 아이콘을 추가했습니다. |
+| 38 | 404페이지 커스텀 | 존재하지 않는 URL 접속 시 사용자 정의 페이지를 커스텀 했습니다. | `404.html`, `css/404.css` | 이미지를 적용하였고, 404 페이지에 대한 설명을 적었습니다. |
+| 39 | 404페이지 타이핑 기능 | 404 페이지에서 타이핑 애니메이션 표시했습니다. | `css/404.css` | keyframe typing, blink를 사용했습니다. |
+| 40 | include 기능 | 한 페이지에서 여러 페이지를 볼 수 있도록 합니다. | `js/include.js` | data-include-path로 AJAX include, includesLoaded 이벤트를 발생했습니다. |
 
 ---
 
