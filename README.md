@@ -65,7 +65,6 @@
 
 ### 📬 Contact Information 📬  
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iyoungheuni@gmail.com)  
-[![Instagram](https://img.shields.io/badge/Instagram-FF0069?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/_eyoung1022/)
 
 ---
 
