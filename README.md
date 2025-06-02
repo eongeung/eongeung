@@ -41,8 +41,8 @@
 | 21 | Projects hover 할 때 색상 변화 | 마우스 오버할 때 색상을 변경합니다. | `project.css` | :hover할 때 배경색을 변경합니다. |
 | 22 | Projects hover 시 커서 변경 | 마우스 오버 시 커서 아이콘을 변경합니다. | `project.css` | cursor: pointer에 효과를 주어 아이콘을 변경합니다. |
 | 23 | Projects 클릭 시 상세 내용 펼침 | 클릭 시 세부 설명 펼침/숨김을 구현합니다. | `projects.js`, `project.css` | toggle 방식으로 세부 설명을 펼치고 숨길 수 있도록 합니다. |
-| 24 | Projects 결과물 GitHub 링크 | 프로젝트 상세에 GitHub 아이콘을 누를 시 깃허브 링크가 뜹니다. | `projects.html` | <a href="...">View on GitHub</a>.를 통해 깃허브 아이콘을 통하여 들어갈 수 있도록 합니다. |
-| 25 | Gmail, GitHub, Velog 아이콘 + 링크 | 소셜 아이콘 클릭 시 링크로 이동합니다. | `contact.html` | <a href>과 image를 사용하여 sns 링크를 만들어줍니다. |
+| 24 | Projects 결과물 GitHub 링크 | 프로젝트 상세에 GitHub 아이콘을 누를 시 깃허브 링크가 뜹니다. | `projects.html` | `<a href="...">`View on GitHub</a>.를 통해 깃허브 아이콘을 통하여 들어갈 수 있도록 합니다. |
+| 25 | Gmail, GitHub, Velog 아이콘 + 링크 | 소셜 아이콘 클릭 시 링크로 이동합니다. | `contact.html` | `<a href>`과 image를 사용하여 sns 링크를 만들어줍니다. |
 | 26 | 카카오톡 공유 썸네일 설정 | 공유 시 썸네일, 제목, 설명 메타데이터를 설정합니다. | `indew.html` | <meta property=>를 사용하여 image, url, title, description 등을 설정합니다. |
 | 27 | 다크모드 버튼 UI | 클릭 시 다크모드를 변경합니다. | `dark.js`, `style.css` | 버튼을 활용해 on, off할 수 있도록 합니다. |
 | 28 | 다크모드 색상 자동 반전 | 다크모드 시 자동으로 반전합니다. | `dark.js`, `style.css` | css에서 자동으로 색을 반전할 수 있도록 합니다. |
