@@ -9,7 +9,7 @@
 이 홈페이지는 HTML, CSS, JavaScript를 기반으로 **직접 테마를 제작**하여 구성하였습니다.
 
 ### 🔗 GitHub Repository
-👉 [https://github.com/eongeung/eongeung](https://github.com/eongeung/eongeung)
+👉 (https://eongeung.github.io/eongeung)
 
 ---
 
