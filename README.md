@@ -2,6 +2,11 @@
 
 #### 👤 이영흔 (Yeong Heun)  
 
+
+---
+
+👉 Github 포트폴리오 링크 ( https://eongeung.github.io/eongeung )
+
 ---
 
 ### 📬 Contact Information 📬  
@@ -43,10 +48,6 @@
 <!--[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022) -->
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=catppuccin_mocha&rank_icon=github)](https://github.com/eongeung/github-readme-stats)  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung&layout=compact&height=500&theme=catppuccin_mocha)](https://github.com/eongeung/github-readme-stats)  
 
----
 
-👉 Github 포트폴리오 링크 ( https://eongeung.github.io/eongeung )
-
----
 
 
