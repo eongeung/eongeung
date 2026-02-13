@@ -4,187 +4,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects</title>
+  <title>Projects 페이지</title>
   <link rel="stylesheet" href="css/project.css" />
 </head>
 
 <body>
 
-  <!-- 제목 -->
   <h1>Projects</h1>
 
-  <!-- 필터 버튼 -->
   <div class="filter-buttons">
-    <button data-year="all" class="active">All</button>
+    <button data-year="all">All</button>
     <button data-year="2023">2023</button>
     <button data-year="2024">2024</button>
     <button data-year="2025">2025</button>
   </div>
 
-  <!-- 프로젝트 리스트 -->
-  <section id="projectList">
+  <!-- 2023 -->
+  <div class="project" data-year="2023" onclick="toggle(this)">
+    <strong>Smart Pet Mate (2023.09–2023.12)</strong>
+    <div class="description">
+      Arduino 기반 자동 급식 시스템 구현 프로젝트.
+      시간 조건 기반 급식 알고리즘 설계 및 예외 처리 로직 구현함.
+      <br><br>
+      <b>Tech Stack:</b> Arduino, C, Embedded, Motor Control
+    </div>
+  </div>
 
-    <!-- ===================== 2023 ===================== -->
+  <!-- 2024 -->
+  <div class="project" data-year="2024" onclick="toggle(this)">
+    <strong>산업현장 안전 모니터링 플랫폼 (2024.04–2024.09)</strong>
+    <div class="description">
+      YOLO 기반 안전모 착용 인식 및 관리자 모니터링 시스템 구현.
+      Raspberry Pi–Arduino 연동 구조 설계 및 Django 관리자 웹 구축함.
+      <br><br>
+      <b>Tech Stack:</b> YOLO, Raspberry Pi, Arduino, Django, Python
+    </div>
+  </div>
 
-    <article class="project-card" data-year="2023">
-      <div class="thumb">
-        <img src="assets/projects/smart-pet-mate.jpg" alt="Smart Pet Mate" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <h3 class="title">Smart Pet Mate <span class="year">(2023.09–2023.12)</span></h3>
-        </div>
+  <div class="project" data-year="2024" onclick="toggle(this)">
+    <strong>Iruri (2024.07–2024.08)</strong>
+    <div class="description">
+      백그라운드 데시벨 측정 및 임계치 기반 시각 경고 앱 개발.
+      플래시 알림 로직 구현 및 Git 브랜치 전략 정리함.
+      <br><br>
+      <b>Tech Stack:</b> Android, Java, Sensor, Git
+    </div>
+  </div>
 
-        <p class="summary">
-          시간 기반 자동 급식 기능을 제공하는 스마트 급식 시스템임.
-        </p>
+  <div class="project" data-year="2024" onclick="toggle(this)">
+    <strong>DUNE (2024.09–2024.11)</strong>
+    <div class="description">
+      C 언어 기반 RTS 게임 엔진 구현 프로젝트.
+      유닛·자원 구조체 설계 및 전투 알고리즘 구현함.
+      <br><br>
+      <b>Tech Stack:</b> C, Data Structure, Algorithm
+    </div>
+  </div>
 
-        <button class="toggle-btn" type="button">Show details</button>
+  <div class="project" data-year="2024" onclick="toggle(this)">
+    <strong>C:BOX (2024.12–2025.06)</strong>
+    <div class="description">
+      QR 기반 캠퍼스 물품 대여·반납 플랫폼 백엔드 개발.
+      JWT 인증 구조 설계 및 중복 대여 방지 로직 구현함.
+      <br><br>
+      <b>Tech Stack:</b> Spring Boot, MySQL, JWT, REST API
+    </div>
+  </div>
 
-        <div class="details">
-          Arduino 기반 모터 제어 로직 구현함.
-          C 언어 기반 시간 조건 처리 알고리즘 설계함.
-          예외 상황 고려한 보정 과정 반복 수행함.
-          동작 안정성 확보함.
-        </div>
+  <!-- 2025 -->
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>NODE (2025.03–2025.06)</strong>
+    <div class="description">
+      MediaPipe 기반 자세 기울기 인식 웨어러블 프로젝트.
+      Arduino–Python 실시간 시각화 구조 설계함.
+      <br><br>
+      <b>Tech Stack:</b> MediaPipe, Python, Arduino, Computer Vision
+    </div>
+  </div>
 
-        <div class="stack">
-          <span class="badge">Arduino</span>
-          <span class="badge">C</span>
-          <span class="badge">Embedded</span>
-          <span class="badge">Motor Control</span>
-        </div>
-      </div>
-    </article>
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>AeroPick (2025.09–2025.12)</strong>
+    <div class="description">
+      AERO-K 연계 사용자 참여형 제품 개발 프로젝트.
+      시리얼 통신 기반 서버 연동 및 QR 결과 제공 시스템 구축함.
+      <br><br>
+      <b>Tech Stack:</b> Spring Boot, Flutter, Serial Communication, QR
+    </div>
+  </div>
 
-    <!-- ===================== 2024 ===================== -->
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>Ansim-on (2025.10–2025.11)</strong>
+    <div class="description">
+      RFID 기반 임산부 배려석 자동 인식 시스템 구현.
+      RFID 감지–서버 전송–LED 알림 흐름 설계함.
+      <br><br>
+      <b>Tech Stack:</b> Arduino, RFID, Spring Boot, IoT
+    </div>
+  </div>
 
-    <article class="project-card" data-year="2024">
-      <div class="thumb">
-        <img src="assets/projects/safe-tech.jpg" alt="Safe-Tech" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <h3 class="title">산업현장 안전 모니터링 <span class="year">(2024.04–2024.09)</span></h3>
-        </div>
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>CBDC 기반 자율주행 모빌리티 자동결제 시스템 (2025.11)</strong>
+    <div class="description">
+      CBDC 모델 기반 토큰 자동결제 시스템 설계 및 구현.
+      대한전자공학회 추계학술대회 게재 및 한이음 공모전 장려상 수상.
+      Flutter 기반 크로스 플랫폼 앱 프론트엔드 개발 및 UI/UX 구현함.
+      <br><br>
+      <b>Tech Stack:</b> Flutter, Blockchain Model, CBDC, Payment Architecture
+    </div>
+  </div>
 
-        <p class="summary">
-          YOLO 기반 안전모 착용 인식 및 관리자 모니터링 시스템임.
-        </p>
-
-        <button class="toggle-btn" type="button">Show details</button>
-
-        <div class="details">
-          Raspberry Pi·Arduino 연동 구조 설계함.
-          YOLO 추론 결과 서버 전달 흐름 구현함.
-          Django 기반 관리자 웹 구축함.
-          인식 결과 조회 및 이력 관리 기능 개발함.
-        </div>
-
-        <div class="stack">
-          <span class="badge">YOLO</span>
-          <span class="badge">Raspberry Pi</span>
-          <span class="badge">Arduino</span>
-          <span class="badge">Django</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="project-card" data-year="2024">
-      <div class="thumb">
-        <img src="assets/projects/iruri.jpg" alt="Decibel App" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <h3 class="title">데시벨 경고 앱 <span class="year">(2024.07–2024.08)</span></h3>
-        </div>
-
-        <p class="summary">
-          청각 장애인을 위한 백그라운드 데시벨 측정 및 경고 애플리케이션임.
-        </p>
-
-        <button class="toggle-btn" type="button">Show details</button>
-
-        <div class="details">
-          백그라운드 데시벨 측정 로직 구현함.
-          임계치 초과 시 플래시 기반 시각 경고 기능 구현함.
-          Git 브랜치 전략 정리 및 개발 문서화 담당함.
-        </div>
-
-        <div class="stack">
-          <span class="badge">Android</span>
-          <span class="badge">Java</span>
-          <span class="badge">Sensor</span>
-          <span class="badge">Git</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="project-card" data-year="2024">
-      <div class="thumb">
-        <img src="assets/projects/dune.jpg" alt="DUNE" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <h3 class="title">DUNE <span class="year">(2024.09–2024.11)</span></h3>
-        </div>
-
-        <p class="summary">
-          C 언어 기반 실시간 전략(RTS) 게임 구현 프로젝트임.
-        </p>
-
-        <button class="toggle-btn" type="button">Show details</button>
-
-        <div class="details">
-          구조체 기반 유닛·자원 상태 모델링함.
-          기능별 모듈 분리 구조 설계함.
-          턴 처리 및 전투 알고리즘 구현함.
-          반복 디버깅 통해 안정성 확보함.
-        </div>
-
-        <div class="stack">
-          <span class="badge">C</span>
-          <span class="badge">Data Structure</span>
-          <span class="badge">Algorithm</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- ===================== 2025 ===================== -->
-
-    <article class="project-card" data-year="2025">
-      <div class="thumb">
-        <img src="assets/projects/node.jpg" alt="NODE" />
-      </div>
-      <div class="content">
-        <div class="top">
-          <h3 class="title">NODE <span class="year">(2025.03–2025.06)</span></h3>
-        </div>
-
-        <p class="summary">
-          디지털 라이프스타일 웨어러블 기반 자세 인식 시스템 개발 프로젝트임.
-        </p>
-
-        <button class="toggle-btn" type="button">Show details</button>
-
-        <div class="details">
-          MediaPipe 랜드마크 좌표 기반 자세 기울기 계산 로직 구축함.
-          Arduino–Python 연동 구조 설계함.
-          실시간 캐릭터 시각화 이벤트 처리 흐름 구성함.
-        </div>
-
-        <div class="stack">
-          <span class="badge">MediaPipe</span>
-          <span class="badge">Python</span>
-          <span class="badge">Arduino</span>
-          <span class="badge">Computer Vision</span>
-        </div>
-      </div>
-    </article>
-
-  </section>
-
-  <!-- JS 연결 -->
   <script src="js/projects.js"></script>
 
 </body>
