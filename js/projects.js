@@ -2,8 +2,11 @@ function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.filter-buttons button');
   const projects = document.querySelectorAll('.project');
 
+  // 필터
   filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+
       const year = button.getAttribute('data-year');
 
       filterButtons.forEach(b => b.classList.remove('active'));
@@ -15,6 +18,7 @@ function initProjectFilter() {
         project.style.display = show ? 'block' : 'none';
       });
 
+      // 필터 바꾸면 상세 닫기
       projects.forEach(project => {
         const desc = project.querySelector('.description');
         if (desc) desc.style.display = 'none';
@@ -22,6 +26,7 @@ function initProjectFilter() {
     });
   });
 
+  // 토글
   document.addEventListener('click', (e) => {
     const project = e.target.closest('.project');
     if (!project) return;
@@ -29,13 +34,15 @@ function initProjectFilter() {
     const desc = project.querySelector('.description');
     if (!desc) return;
 
-    const isOpen = desc.style.display === 'block';
+    const isOpen = window.getComputedStyle(desc).display !== 'none';
 
+    // 다른 거 닫기
     projects.forEach(p => {
       const d = p.querySelector('.description');
       if (d) d.style.display = 'none';
     });
 
+    // 현재만 토글
     desc.style.display = isOpen ? 'none' : 'block';
   });
 }
