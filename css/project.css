@@ -97,6 +97,16 @@ body {
   padding: 16px 16px 18px;
 }
 
+.project .description {
+  display: none;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .top {
   display: flex;
   align-items: baseline;
