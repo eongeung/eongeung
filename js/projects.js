@@ -1,8 +1,7 @@
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.filter-buttons button');
-  const cards = document.querySelectorAll('.project-card');
+  const projects = document.querySelectorAll('.project');
 
-  // filter
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       const year = button.getAttribute('data-year');
@@ -10,49 +9,36 @@ function initProjectFilter() {
       filterButtons.forEach(b => b.classList.remove('active'));
       button.classList.add('active');
 
-      cards.forEach(card => {
-        const cardYear = card.getAttribute('data-year');
-        const show = (year === 'all' || cardYear === year);
-        card.style.display = show ? 'grid' : 'none';
+      projects.forEach(project => {
+        const projectYear = project.getAttribute('data-year');
+        const show = (year === 'all' || projectYear === year);
+        project.style.display = show ? 'block' : 'none';
       });
 
-      // close all details when filtering
-      cards.forEach(card => {
-        const details = card.querySelector('.details');
-        const toggleBtn = card.querySelector('.toggle-btn');
-        if (details) details.style.display = 'none';
-        if (toggleBtn) toggleBtn.textContent = 'Show details';
+      projects.forEach(project => {
+        const desc = project.querySelector('.description');
+        if (desc) desc.style.display = 'none';
       });
     });
   });
 
-  // toggle details (event delegation)
   document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.toggle-btn');
-    if (!btn) return;
+    const project = e.target.closest('.project');
+    if (!project) return;
 
-    const card = btn.closest('.project-card');
-    if (!card) return;
+    const desc = project.querySelector('.description');
+    if (!desc) return;
 
-    const details = card.querySelector('.details');
-    if (!details) return;
+    const isOpen = desc.style.display === 'block';
 
-    const isOpen = details.style.display === 'block';
-
-    // close others
-    cards.forEach(c => {
-      const d = c.querySelector('.details');
-      const b = c.querySelector('.toggle-btn');
+    projects.forEach(p => {
+      const d = p.querySelector('.description');
       if (d) d.style.display = 'none';
-      if (b) b.textContent = 'Show details';
     });
 
-    // toggle current
-    details.style.display = isOpen ? 'none' : 'block';
-    btn.textContent = isOpen ? 'Show details' : 'Hide details';
+    desc.style.display = isOpen ? 'none' : 'block';
   });
 }
 
-// includesLoaded가 있는 환경 + 일반 로드 둘 다 대응
 window.addEventListener('includesLoaded', initProjectFilter);
 document.addEventListener('DOMContentLoaded', initProjectFilter);
