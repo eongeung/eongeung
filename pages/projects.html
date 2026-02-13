@@ -10,7 +10,7 @@
 
 <body>
 
-  <h1>Projects</h1>
+  <h1><br><br><br>Projects<br><br><br></h1>
 
   <div class="filter-buttons">
     <button data-year="all">All</button>
@@ -21,99 +21,128 @@
 
   <!-- 2023 -->
   <div class="project" data-year="2023" onclick="toggle(this)">
-    <strong>Smart Pet Mate (2023.09–2023.12)</strong>
+    <strong>Hanpiece</strong>
     <div class="description">
-      Arduino 기반 자동 급식 시스템 구현 프로젝트.
-      시간 조건 기반 급식 알고리즘 설계 및 예외 처리 로직 구현함.
+      보드게임의 전략성과 재미를 디지털로 구현한 턴 기반 시뮬레이션 게임임.
+      C 언어로 핵심 로직과 사용자 인터페이스 구현함.
       <br><br>
-      <b>Tech Stack:</b> Arduino, C, Embedded, Motor Control
+      <b>Tech Stack:</b> C
+    </div>
+  </div>
+
+  <div class="project" data-year="2023" onclick="toggle(this)">
+    <strong>Smart Pet Mate</strong>
+    <div class="description">
+      Arduino 기반 자동 급식 시스템 개발 프로젝트임.
+      시간 기반 동작 알고리즘 설계 및 예외 상황 처리 로직 구현함.
+      급식 동작 테스트와 보정 과정을 반복해 안정성 개선함.
+      <br><br>
+      <b>Tech Stack:</b> Arduino, C
     </div>
   </div>
 
   <!-- 2024 -->
   <div class="project" data-year="2024" onclick="toggle(this)">
-    <strong>산업현장 안전 모니터링 플랫폼 (2024.04–2024.09)</strong>
+    <strong>산업현장 안전 모니터링 플랫폼</strong>
     <div class="description">
-      YOLO 기반 안전모 착용 인식 및 관리자 모니터링 시스템 구현.
-      Raspberry Pi–Arduino 연동 구조 설계 및 Django 관리자 웹 구축함.
+      라즈베리파이·Arduino 연동 및 YOLO 기반 안전모 착용 인식 시스템 기획함.
+      인식 결과를 관리자에게 전달하고 관리하는 흐름 설계함.
+      Django 기반 관리자 웹 구축 및 결과 조회·관리 화면 개발 담당함.
       <br><br>
-      <b>Tech Stack:</b> YOLO, Raspberry Pi, Arduino, Django, Python
+      <b>Tech Stack:</b> Raspberry Pi, Arduino, YOLO, Django, Python
     </div>
   </div>
 
   <div class="project" data-year="2024" onclick="toggle(this)">
-    <strong>Iruri (2024.07–2024.08)</strong>
+    <strong>Iruri</strong>
     <div class="description">
-      백그라운드 데시벨 측정 및 임계치 기반 시각 경고 앱 개발.
-      플래시 알림 로직 구현 및 Git 브랜치 전략 정리함.
+      백그라운드 데시벨 측정 및 임계치 기반 경고 로직 구현함.
+      플래시 기반 시각 경고 기능 구현 및 동작 테스트 개선함.
+      Git 브랜치 관리와 커밋 규칙 정리 및 개발 문서 작성 담당함.
       <br><br>
-      <b>Tech Stack:</b> Android, Java, Sensor, Git
+      <b>Tech Stack:</b> Android Studio, Java
     </div>
   </div>
 
   <div class="project" data-year="2024" onclick="toggle(this)">
-    <strong>DUNE (2024.09–2024.11)</strong>
+    <strong>DUNE</strong>
     <div class="description">
-      C 언어 기반 RTS 게임 엔진 구현 프로젝트.
-      유닛·자원 구조체 설계 및 전투 알고리즘 구현함.
+      C언어 기반 RTS 게임 로직 구조화 및 핵심 자료구조 설계함.
+      구조체로 유닛 상태와 자원 정보를 모델링하고 기능별 모듈로 분리함.
+      턴 처리와 전투 규칙 등 게임 알고리즘 구현 및 디버깅함.
       <br><br>
-      <b>Tech Stack:</b> C, Data Structure, Algorithm
-    </div>
-  </div>
-
-  <div class="project" data-year="2024" onclick="toggle(this)">
-    <strong>C:BOX (2024.12–2025.06)</strong>
-    <div class="description">
-      QR 기반 캠퍼스 물품 대여·반납 플랫폼 백엔드 개발.
-      JWT 인증 구조 설계 및 중복 대여 방지 로직 구현함.
-      <br><br>
-      <b>Tech Stack:</b> Spring Boot, MySQL, JWT, REST API
+      <b>Tech Stack:</b> C
     </div>
   </div>
 
   <!-- 2025 -->
+
   <div class="project" data-year="2025" onclick="toggle(this)">
-    <strong>NODE (2025.03–2025.06)</strong>
+    <strong>C:BOX</strong>
     <div class="description">
-      MediaPipe 기반 자세 기울기 인식 웨어러블 프로젝트.
-      Arduino–Python 실시간 시각화 구조 설계함.
+      캠퍼스 공유 물품을 QR로 대여·반납하는 모바일 플랫폼 개발함.
+      백엔드 담당으로 로그인 인증, 대여·반납 로직, 중복 대여 방지, 자동 반납 기한 구현함.
+      QR 스캔부터 상태 업데이트까지 실시간 대여 파이프라인 설계함.
       <br><br>
-      <b>Tech Stack:</b> MediaPipe, Python, Arduino, Computer Vision
+      <b>Tech Stack:</b> Spring Boot, MySQL, Flutter
+    </div>
+  </div>
+ 
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>Ondy</strong>
+    <div class="description">
+      커서 위치를 따라 이동하는 캐릭터 시각화 앱 구현함.
+      좌표 이벤트 처리 및 애니메이션 동작 구성함.
+      <br><br>
+      <b>Tech Stack:</b> Python
+    </div>
+  </div> 
+
+  <div class="project" data-year="2025" onclick="toggle(this)">
+    <strong>NODE</strong>
+    <div class="description">
+      디지털 라이프 스타일 웨어러블 개발 프로젝트임.
+      MediaPipe 기반 자세 기울기 인식 시스템 구축함.
+      Arduino–Python 실시간 캐릭터 시각화 앱 개발함.
+      <br><br>
+      <b>Tech Stack:</b> MediaPipe, Python, Arduino
     </div>
   </div>
 
   <div class="project" data-year="2025" onclick="toggle(this)">
-    <strong>AeroPick (2025.09–2025.12)</strong>
+    <strong>Ansim-on</strong>
     <div class="description">
-      AERO-K 연계 사용자 참여형 제품 개발 프로젝트.
-      시리얼 통신 기반 서버 연동 및 QR 결과 제공 시스템 구축함.
+      Arduino 회로 설계 및 Spring Boot 서버 개발 담당함.
+      RFID 감지–서버 전송–LED 알림 활성화로 이어지는 전체 흐름 구현함.
+      대중교통 배려석 자동화 모델로 실사용 가능성 검증함.
       <br><br>
-      <b>Tech Stack:</b> Spring Boot, Flutter, Serial Communication, QR
+      <b>Tech Stack:</b> Arduino, RFID, Spring Boot
     </div>
   </div>
 
   <div class="project" data-year="2025" onclick="toggle(this)">
-    <strong>Ansim-on (2025.10–2025.11)</strong>
+    <strong>AeroPick</strong>
     <div class="description">
-      RFID 기반 임산부 배려석 자동 인식 시스템 구현.
-      RFID 감지–서버 전송–LED 알림 흐름 설계함.
+      항공사(AERO-K) 연계 기반 제품 개발 프로젝트임.
+      Spring Boot 기반 백엔드 서버 구축 및 Flutter 기반 크로스플랫폼 앱 개발함.
+      시리얼 통신 연동 및 QR 기반 결과 제공 서버 구축함.
       <br><br>
-      <b>Tech Stack:</b> Arduino, RFID, Spring Boot, IoT
+      <b>Tech Stack:</b> Spring Boot, Flutter, Arduino, Raspberry Pi
     </div>
   </div>
 
   <div class="project" data-year="2025" onclick="toggle(this)">
-    <strong>CBDC 기반 자율주행 모빌리티 자동결제 시스템 (2025.11)</strong>
+    <strong>MotoWallet</strong>
     <div class="description">
-      CBDC 모델 기반 토큰 자동결제 시스템 설계 및 구현.
-      대한전자공학회 추계학술대회 게재 및 한이음 공모전 장려상 수상.
-      Flutter 기반 크로스 플랫폼 앱 프론트엔드 개발 및 UI/UX 구현함.
+      CBDC 모델 기반 토큰을 활용한 자율주행 모빌리티 자동결제 시스템 설계 및 구현함.
+      학술대회 프로시딩 게재 및 공모전 수상, 특허 출원 진행 포함함.
+      Flutter 기반 크로스플랫폼 앱 프론트엔드 개발 및 UI/UX 구현함.
       <br><br>
-      <b>Tech Stack:</b> Flutter, Blockchain Model, CBDC, Payment Architecture
+      <b>Tech Stack:</b> Flutter, React, Spring Boot, Etherium, MySQL
     </div>
   </div>
 
   <script src="js/projects.js"></script>
-
 </body>
+
 </html>
