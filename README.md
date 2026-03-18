@@ -5,10 +5,6 @@
 
 ---
 
-👉 Github 포트폴리오 링크 ( https://eongeung.github.io/eongeung )
-
----
-
 ### 📬 Contact Information 📬  
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iyoungheuni@gmail.com)  
 
