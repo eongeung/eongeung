@@ -23,5 +23,6 @@
 ![Colab](https://img.shields.io/badge/Colab-2C2C32.svg?style=for-the-badge&logo=googlecolab&logoColor=F9AB00)  
 ---
 ### 📊 Stats  
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)
+<!--[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)-->
+
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=catppuccin_mocha&rank_icon=github)](https://github.com/eongeung/github-readme-stats)
