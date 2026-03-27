@@ -18,6 +18,3 @@
 <!--[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)-->
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false)](https://git.io/streak-stats)
-![](https://komarev.com/ghpvc/?username=eongeung&color=blueviolet&style=for-the-badge)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung&layout=compact&theme=catppuccin_mocha)](https://github.com/eongeung)
-[![trophy](https://github-profile-trophy.vercel.app/?username=eongeung&theme=onedark&row=1&column=4)](https://github.com/ryo-ma/github-profile-trophy)
