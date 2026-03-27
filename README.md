@@ -17,4 +17,4 @@
 ### 📊 Stats  
 <!--[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)-->
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=catppuccin_mocha&rank_icon=github)](https://github.com/eongeung/github-readme-stats)
+[![GitHub Streak](https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false)](https://git.io/streak-stats)
