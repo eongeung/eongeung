@@ -16,10 +16,7 @@
 
 ### 📊 GitHub Stats
 
-### 📊 GitHub Stats
-
 <p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=eongeung&show_icons=true&theme=tokyonight"/>
-  <img src="https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false"/>
-  <!-- <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=eongeung&layout=compact&theme=tokyonight"/> -->
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=eongeung&show_icons=true&theme=tokyonight" width="48%"/>
+  <img src="https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false" width="48%"/>
 </p>
