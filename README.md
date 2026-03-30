@@ -14,7 +14,9 @@
 ![Flutter](https://img.shields.io/badge/Flutter-02569B.svg?style=for-the-badge&logo=flutter&logoColor=white) 
 ---
 
-### 📊 Stats  
-<!--[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=yh1022)](https://solved.ac/yh1022)-->
+### 📊 GitHub Stats
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false)](https://git.io/streak-stats)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=eongeung&show_icons=true&theme=tokyonight"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eongeung&layout=compact&theme=tokyonight"/>
+</p>
