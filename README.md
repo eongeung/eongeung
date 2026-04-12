@@ -2,7 +2,7 @@
 #### 👤 이영흔 (Yeong Heun)  
 ---
 ### 📬 Contact Information 📬  
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:iyoungheuni@gmail.com)  
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yh03lee@gmail.com)  
 ---
 ### 🧑‍💻 Tech Stack 🧑‍💻  
 ![Java](https://img.shields.io/badge/Java-3578E5?style=for-the-badge&logo=Java&logoColor=white)
