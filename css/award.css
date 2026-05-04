@@ -6,7 +6,6 @@ body {
   justify-content: center;
   color: #333;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   padding-top: 80px;
   transition: background-color 0.3s, color 0.3s;
   text-align: center;
@@ -26,7 +25,8 @@ body {
   text-align: center;
 }
 
-.experience-carousel {
+.experience-carousel,
+.license-carousel {
   display: flex;
   gap: 20px;
   padding: 20px;
@@ -35,15 +35,19 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.experience-entry {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
+.experience-entry,
+.license-card {
   background: white;
   border-left: 6px solid #0f3853;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: left;
+}
+
+.experience-entry {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
 }
 
 .experience-entry h2 {
@@ -64,24 +68,9 @@ body {
   color: #444;
 }
 
-.license-carousel {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 .license-card {
   flex: 0 0 250px;
   scroll-snap-align: start;
-  background: white;
-  border-left: 6px solid #0f3853;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-align: left;
 }
 
 .license-card h3 {
@@ -130,7 +119,7 @@ body {
   .experience-entry h2 {
     font-size: 1.1rem;
   }
-  
+
   .license-card {
     flex: 0 0 80%;
     padding: 16px;

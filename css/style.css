@@ -6,7 +6,6 @@ body {
   color: #333;
   position: relative;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   text-align: center;
   font-size: 18px;
 }
@@ -142,14 +141,6 @@ a:hover {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-  text-align: center;
-}
-
-.tech-title {
-  color: #0f3853;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -353,12 +344,6 @@ body.dark-mode h1,a {
     gap: 10px;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-
   .contact-icons a img {
     width: 24px;
     height: 24px;
@@ -379,9 +364,4 @@ body.dark-mode h1,a {
     font-size: 0.95rem;
   }
 
-  .nav-links a {
-    font-size: 14px;
-  }
 }
-
-
