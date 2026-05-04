@@ -4,6 +4,8 @@ const darkbtn = document.getElementById('darkModeToggle');
   if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
     darkbtn.textContent = 'OFF';
+  } else {
+    darkbtn.textContent = 'ON';
   }
 
   darkbtn.addEventListener('click', () => {
