@@ -1,4 +1,9 @@
+let projectFilterInited = false;
+
 function initProjectFilter() {
+  if (projectFilterInited) return;
+  projectFilterInited = true;
+
   const filterButtons = document.querySelectorAll('.filter-buttons button');
   const projects = document.querySelectorAll('.project');
 
