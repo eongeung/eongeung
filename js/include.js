@@ -1,56 +1,29 @@
-let projectFilterInited = false;
+(function () {
+  const sections = document.querySelectorAll('[data-include-path]');
+  let pending = sections.length;
 
-function initProjectFilter() {
-  if (projectFilterInited) return;
-  projectFilterInited = true;
+  if (pending === 0) {
+    window.dispatchEvent(new Event('includesLoaded'));
+    return;
+  }
 
-  const filterButtons = document.querySelectorAll('.filter-buttons button');
-  const projects = document.querySelectorAll('.project');
-
-  projects.forEach(p => {
-    const desc = p.querySelector('.description');
-    if (desc) desc.style.display = 'none';
-  });
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.stopPropagation();
-
-      const year = button.getAttribute('data-year');
-
-      filterButtons.forEach(b => b.classList.remove('active'));
-      button.classList.add('active');
-
-      projects.forEach(project => {
-        const projectYear = project.getAttribute('data-year');
-        const show = (year === 'all' || projectYear === year);
-        project.style.display = show ? 'block' : 'none';
+  sections.forEach(function (section) {
+    const path = section.getAttribute('data-include-path');
+    fetch(path)
+      .then(function (res) { return res.text(); })
+      .then(function (html) {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        section.innerHTML = doc.body.innerHTML;
+      })
+      .catch(function () {
+        section.innerHTML = '<p>콘텐츠를 불러올 수 없습니다.</p>';
+      })
+      .finally(function () {
+        pending--;
+        if (pending === 0) {
+          window.dispatchEvent(new Event('includesLoaded'));
+        }
       });
-
-      projects.forEach(project => {
-        const desc = project.querySelector('.description');
-        if (desc) desc.style.display = 'none';
-      });
-    });
   });
-
-  document.addEventListener('click', (e) => {
-    const project = e.target.closest('.project');
-    if (!project) return;
-
-    const desc = project.querySelector('.description');
-    if (!desc) return;
-
-    const isOpen = window.getComputedStyle(desc).display !== 'none';
-
-    projects.forEach(p => {
-      const d = p.querySelector('.description');
-      if (d) d.style.display = 'none';
-    });
-
-    desc.style.display = isOpen ? 'none' : 'block';
-  });
-}
-
-document.addEventListener('DOMContentLoaded', initProjectFilter);
-window.addEventListener('includesLoaded', initProjectFilter);
+})();
