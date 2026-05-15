@@ -8,7 +8,7 @@ export default function About() {
     <section id="about">
       <h1>About Me</h1>
       <FadeIn>
-        <img src="/assets/images/pp.jpg" alt="portfolio" className="profile-img" />
+        <img src={`${import.meta.env.BASE_URL}assets/images/pp.jpg`} alt="portfolio" className="profile-img" />
         {lang === 'ko' ? (
           <p>
             안녕하세요! 저는 컴퓨터공학과를 졸업한 <strong>이영흔</strong>입니다.

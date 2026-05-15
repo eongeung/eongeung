@@ -16,7 +16,7 @@ export default function ToTopButton() {
       style={{ display: visible ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center' }}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      <img src="/assets/images/top.png" alt="top" />
+      <img src={`${import.meta.env.BASE_URL}assets/images/top.png`} alt="top" />
     </button>
   );
 }
