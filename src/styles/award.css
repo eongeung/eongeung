@@ -1,0 +1,200 @@
+/* ===== Experience / Award / License ===== */
+
+.experience-section,
+.license-section {
+  text-align: center;
+}
+
+.experience-section h1,
+.license-section h1 {
+  color: #0f3853;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: -0.025em;
+}
+
+/* ===== Carousel ===== */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid #0f3853;
+  background: white;
+  color: #0f3853;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 2px 10px rgba(15, 56, 83, 0.1);
+}
+
+.carousel-btn:hover {
+  background: #0f3853;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 16px rgba(15, 56, 83, 0.25);
+}
+
+.experience-carousel {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  padding: 20px 4px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.experience-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Experience Cards ===== */
+.experience-entry {
+  flex: 0 0 290px;
+  scroll-snap-align: start;
+  background: white;
+  border-left: 4px solid #0f3853;
+  padding: 26px 24px;
+  border-radius: 14px;
+  box-shadow: 0 3px 16px rgba(15, 56, 83, 0.08);
+  text-align: left;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.experience-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(15, 56, 83, 0.14);
+}
+
+.experience-entry h2 {
+  font-size: 1rem;
+  color: #0f3853;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.experience-entry span {
+  display: block;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.experience-entry p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.75;
+  margin: 0;
+  max-width: none;
+}
+
+/* ===== License List ===== */
+.license-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 480px;
+  text-align: left;
+}
+
+.license-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 4px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f3853;
+  letter-spacing: -0.01em;
+}
+
+.license-list li:last-child {
+  border-bottom: none;
+}
+
+.license-check {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #4a9eca;
+  flex-shrink: 0;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode .carousel-btn {
+  background: #161b22;
+  border-color: #388bfd;
+  color: #79c0ff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .carousel-btn:hover {
+  background: #388bfd;
+  color: #0d1117;
+}
+
+body.dark-mode .experience-entry {
+  background: #161b22;
+  border-left-color: #388bfd;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .experience-entry:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .experience-entry h2 {
+  color: #79c0ff;
+}
+
+body.dark-mode .experience-entry span {
+  color: #6e7681;
+}
+
+body.dark-mode .experience-entry p {
+  color: #8b949e;
+}
+
+body.dark-mode .license-list li {
+  color: #c9d1d9;
+  border-bottom-color: #21262d;
+}
+
+body.dark-mode .license-check {
+  color: #79c0ff;
+}
+
+body.dark-mode .experience-section h1,
+body.dark-mode .license-section h1 {
+  color: #79c0ff;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+  .experience-entry {
+    flex: 0 0 240px;
+    padding: 18px 16px;
+  }
+
+  .experience-entry h2 {
+    font-size: 0.92rem;
+  }
+}

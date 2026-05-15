@@ -1,0 +1,171 @@
+/* ===== Projects ===== */
+
+h1 {
+  color: #0f3853;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  letter-spacing: -0.025em;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(90deg, #0f3853, #4a9eca);
+  margin: 10px auto 30px;
+  border-radius: 2px;
+}
+
+/* ===== Projects Wrapper ===== */
+.projects-list {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ===== Filter Buttons ===== */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  padding: 7px 20px;
+  background: white;
+  color: #0f3853;
+  border: 1.5px solid #0f3853;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.filter-buttons button:hover {
+  background: #0f3853;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(15, 56, 83, 0.22);
+}
+
+.filter-buttons button.active {
+  background: #0f3853;
+  color: white;
+  box-shadow: 0 4px 14px rgba(15, 56, 83, 0.22);
+}
+
+/* ===== Project Cards ===== */
+.project {
+  background: white;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  padding: 22px 26px;
+  box-shadow: 0 2px 12px rgba(15, 56, 83, 0.07);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
+  border-left: 4px solid #0f3853;
+}
+
+.project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 24px rgba(15, 56, 83, 0.12);
+}
+
+.project strong {
+  display: flex;
+  align-items: center;
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #0f3853;
+  letter-spacing: -0.01em;
+}
+
+.project strong::after {
+  content: '›';
+  font-size: 1.3rem;
+  color: #cbd5e1;
+  margin-left: auto;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.project:hover strong::after {
+  color: #4a9eca;
+  transform: translateX(3px);
+}
+
+/* ===== Description ===== */
+.description {
+  display: none;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+  color: #475569;
+  line-height: 1.85;
+  font-size: 0.93rem;
+  text-align: left;
+}
+
+a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #0f3853;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #4a9eca;
+  text-decoration: none;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode .filter-buttons button {
+  background: #161b22;
+  border-color: #388bfd;
+  color: #79c0ff;
+}
+
+body.dark-mode .filter-buttons button:hover,
+body.dark-mode .filter-buttons button.active {
+  background: #388bfd;
+  color: #0d1117;
+  box-shadow: 0 4px 14px rgba(56, 139, 253, 0.3);
+}
+
+body.dark-mode .project {
+  background: #161b22;
+  border-left-color: #388bfd;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .project:hover {
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .project strong {
+  color: #79c0ff;
+}
+
+body.dark-mode .project strong::after {
+  color: #30363d;
+}
+
+body.dark-mode .project:hover strong::after {
+  color: #79c0ff;
+}
+
+body.dark-mode .description {
+  color: #8b949e;
+  border-top-color: #21262d;
+}
