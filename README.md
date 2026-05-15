@@ -1,16 +1,21 @@
-# React + Vite
+![header](https://capsule-render.vercel.app/api?type=venom&color=gradient&height=200&section=header&text=Yeong%20Heun's-nl-GitHub&fontSize=80&animation=twinkling)
+#### 👤 이영흔 (Yeong Heun)  
+---
+### 📬 Contact Information 📬  
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yh03lee@gmail.com)  
+---
+### 🧑‍💻 Tech Stack 🧑‍💻  
+![Java](https://img.shields.io/badge/Java-3578E5?style=for-the-badge&logo=Java&logoColor=white)
+![Spring](https://img.shields.io/badge/Spring-6DB33F.svg?style=for-the-badge&logo=Spring&logoColor=white) 
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=Spring%20Boot&logoColor=white) 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) 
+![Django](https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=django&logoColor=white) 
+![Flutter](https://img.shields.io/badge/Flutter-02569B.svg?style=for-the-badge&logo=flutter&logoColor=white) 
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📊 GitHub Stats
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=eongeung&show_icons=true&theme=tokyonight" width="48%"/>
+  <img src="https://streak-stats.demolab.com?user=eongeung&theme=catppuccin-mocha&hide_border=false" width="48%"/>
+</p>
