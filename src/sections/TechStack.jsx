@@ -7,6 +7,7 @@ const TECH_CATEGORIES = [
       { label: 'HTML5', url: 'https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white' },
       { label: 'CSS3', url: 'https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white' },
       { label: 'JavaScript', url: 'https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=20232a' },
+      { label: 'React', url: 'https://img.shields.io/badge/React-20232a.svg?style=for-the-badge&logo=react&logoColor=61DAFB' },
     ],
   },
   {
@@ -14,8 +15,15 @@ const TECH_CATEGORIES = [
     badges: [
       { label: 'Java', url: 'https://img.shields.io/badge/Java-3578E5?style=for-the-badge&logo=java&logoColor=white' },
       { label: 'Spring', url: 'https://img.shields.io/badge/Spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white' },
-      { label: 'MySQL', url: 'https://img.shields.io/badge/MySQL-00758F.svg?style=for-the-badge&logo=mysql&logoColor=white' },
       { label: 'Django', url: 'https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=django&logoColor=white' },
+    ],
+  },
+  {
+    title: 'Database',
+    badges: [
+      { label: 'MySQL', url: 'https://img.shields.io/badge/MySQL-00758F.svg?style=for-the-badge&logo=mysql&logoColor=white' },
+      { label: 'MariaDB', url: 'https://img.shields.io/badge/MariaDB-003545.svg?style=for-the-badge&logo=mariadb&logoColor=white' },
+      { label: 'PostgreSQL', url: 'https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white' },
     ],
   },
   {
@@ -37,15 +45,6 @@ const TECH_CATEGORIES = [
     badges: [
       { label: 'Arduino', url: 'https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=arduino&logoColor=white' },
       { label: 'Raspberry Pi', url: 'https://img.shields.io/badge/Raspberry%20Pi-A22846.svg?style=for-the-badge&logo=raspberrypi&logoColor=white' },
-    ],
-  },
-  {
-    title: 'Digital Fabrication',
-    badges: [
-      { label: '3D Printer', url: 'https://img.shields.io/badge/3D%20Printer-FF6F00?style=for-the-badge&logo=3d-printing&logoColor=white' },
-      { label: 'Bambu Lab', url: 'https://img.shields.io/badge/Bambu%20Lab-000000?style=for-the-badge&logo=bambulab&logoColor=white' },
-      { label: 'Laser Cutter', url: 'https://img.shields.io/badge/Laser%20Cutter-DC143C?style=for-the-badge&logo=laser&logoColor=white' },
-      { label: 'UV Printer', url: 'https://img.shields.io/badge/UV%20Printer-6742E2?style=for-the-badge&logo=paintbrush&logoColor=white' },
     ],
   },
 ];
