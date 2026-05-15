@@ -17,7 +17,7 @@ export default function About() {
             학습한 내용을 정리하고 기록하는 습관을 기르기 위해{' '}
             <a href="https://velog.io/@0nee/posts" target="_blank" rel="noreferrer">기술 블로그</a>를 운영 중이며,{' '}
             <a href="https://github.com/eongeung" target="_blank" rel="noreferrer">GitHub 저장소</a>에 프로젝트 결과물들을 업로드하고 있습니다.
-            직접 제작한 저의 포트폴리오 웹사이트는 HTML, CSS, JavaScript를 활용하여 구성되었으며,
+            직접 제작한 저의 포트폴리오 웹사이트는 React를 활용하여 구성되었으며,
             앞으로도 새로운 프로젝트와 공부한 내용을 이곳에 정리하고 확장해 나갈 예정입니다.
           </p>
         ) : (
@@ -29,7 +29,7 @@ export default function About() {
             To build a habit of organizing and documenting what I learn, I maintain a{' '}
             <a href="https://velog.io/@0nee/posts" target="_blank" rel="noreferrer">technical blog</a> and consistently upload project results to my{' '}
             <a href="https://github.com/eongeung" target="_blank" rel="noreferrer">GitHub repository</a>.<br />
-            This portfolio website was built from scratch using HTML, CSS, and JavaScript. I plan to continue organizing and expanding it with new projects and studies.
+            This portfolio website was built from scratch using React. I plan to continue organizing and expanding it with new projects and studies.
           </p>
         )}
       </FadeIn>
