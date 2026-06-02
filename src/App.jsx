@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LangProvider } from './contexts/LangContext';
 import ProgressBar from './components/ProgressBar';
@@ -12,8 +13,9 @@ import Award from './sections/Award';
 import Experience from './sections/Experience';
 import License from './sections/License';
 import Contact from './sections/Contact';
+import NotFound from './pages/NotFound';
 
-export default function App() {
+function Main() {
   return (
     <ThemeProvider>
       <LangProvider>
@@ -38,5 +40,16 @@ export default function App() {
         <ToTopButton />
       </LangProvider>
     </ThemeProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
