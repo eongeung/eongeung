@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contact">
       <h1>Contact</h1>
       <div className="contact-icons">
-        <a href="mailto:iyoungheuni@gmail.com">
+        <a href="mailto:2yeongheun@gmail.com">
           <img src={`${import.meta.env.BASE_URL}assets/images/gmail.svg`} alt="email" />
         </a>
         <a href="https://github.com/eongeung" target="_blank" rel="noreferrer">
