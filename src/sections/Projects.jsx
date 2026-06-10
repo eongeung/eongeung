@@ -14,8 +14,8 @@ const PROJECTS = [
     team:    { ko: '풀스택 5', en: 'Full-Stack 5' },
     thumbnail: 'univus.png',
     overview: {
-      ko: '전국 325개 대학 학생(B2C)과 대학·기관(B2B)을 동시에 겨냥한 ERP·LMS·커뮤니티 통합 플랫폼입니다. 학사 관리(ERP), 강의·학습 지원(LMS), 커뮤니티를 하나로 통합하고, AI 챗봇과 실시간 날씨 기능을 제공하며 Kubernetes 환경에 배포합니다.',
-      en: 'An integrated ERP, LMS, and community platform targeting both students (B2C) and universities/institutions (B2B) across 325 universities. Combines academic administration (ERP), learning management (LMS), and community features, with an AI chatbot and real-time weather, deployed on Kubernetes.',
+      ko: '전국 325개 대학 학생(B2C)과 대학·기관(B2B)을 동시에 겨냥한 커뮤니티 플랫폼입니다. 교육통계센터 기반 대학 정보, AI 챗봇, 실시간 날씨, 커뮤니티 기능을 제공하며, Spring Boot 백엔드와 Next.js 프론트엔드를 분리한 구조로 Kubernetes 환경에 배포합니다.',
+      en: 'A community platform targeting both students (B2C) and universities/institutions (B2B) across 325 universities nationwide. Provides university info from the Education Statistics Center, an AI chatbot, real-time weather, and community features, with a Spring Boot backend and Next.js frontend deployed on Kubernetes.',
     },
     problem: {
       ko: ['대학생이 학교 정보, 커뮤니티, 날씨 등 다양한 정보를 한 곳에서 확인하기 어려웠습니다.', '전국 대학 정보가 통합된 커뮤니티 서비스가 없었습니다.', '관리자가 사용자 계정과 공지사항을 효율적으로 관리할 수 있는 시스템이 부족했습니다.'],
@@ -29,7 +29,7 @@ const PROJECTS = [
       ko: ['관리자 대시보드 구현 — 계정 일괄 생성·수정·삭제, 활동 정지·탈퇴 처리, 공지사항 CRUD', '교육통계센터 기반 전국 325개 대학 데이터 수집 및 SQL 쿼리 변환·DB 적재', 'AI 챗봇 구현 — Groq LLM API 연동, 질문·응답 로그 DB 저장 및 대화 흐름 관리', 'OpenWeatherMap API 연동 — GPS 기반 실시간 날씨 데이터 가공·노출'],
       en: ['Built admin dashboard — bulk account create/update/delete, activity suspension & withdrawal, announcement CRUD', 'Collected 325 university datasets from Education Statistics Center and loaded into DB via SQL conversion', 'Implemented AI chatbot — Groq LLM API integration, Q&A log storage, and conversation flow management', 'Integrated OpenWeatherMap API — GPS-based real-time weather data processing and display'],
     },
-    techStack: 'Java 21 · Spring Boot · MyBatis · Oracle · Next.js · TypeScript · Docker · Kubernetes',
+    techStack: 'Java 21 · Spring Boot · MyBatis · Oracle · Next.js · TypeScript · Docker · Kubernetes','jira'
     images: ['projects/univus/home.png', 'projects/univus/dashboard.png', 'projects/univus/erd.png'],
     results: {
       ko: ['관리자 대시보드에서 전체 사용자 계정 관리 및 공지사항 CRUD 기능을 구현했습니다.', 'GitHub Actions · Docker · Kubernetes(Helm) 기반 CI/CD 파이프라인을 구성하고 실배포를 완료했습니다.', '현재 커뮤니티 핵심 기능 확장을 진행 중입니다.'],
@@ -82,7 +82,7 @@ const PROJECTS = [
     name: 'Frankly',
     role:    { ko: '백엔드 개발자', en: 'Backend Developer' },
     summary: { ko: '익명 커뮤니티 REST API', en: 'Anonymous Community REST API' },
-    date: '2026.02 ~ ing',
+    date: '2026.03 ~ 2026.04',
     team:    { ko: '백엔드 1', en: 'Backend 1' },
     thumbnail: 'frankly.png',
     overview: {
