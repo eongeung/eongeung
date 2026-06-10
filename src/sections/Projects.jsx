@@ -29,7 +29,7 @@ const PROJECTS = [
       ko: ['관리자 대시보드 구현 — 계정 일괄 생성·수정·삭제, 활동 정지·탈퇴 처리, 공지사항 CRUD', '교육통계센터 기반 전국 325개 대학 데이터 수집 및 SQL 쿼리 변환·DB 적재', 'AI 챗봇 구현 — Groq LLM API 연동, 질문·응답 로그 DB 저장 및 대화 흐름 관리', 'OpenWeatherMap API 연동 — GPS 기반 실시간 날씨 데이터 가공·노출'],
       en: ['Built admin dashboard — bulk account create/update/delete, activity suspension & withdrawal, announcement CRUD', 'Collected 325 university datasets from Education Statistics Center and loaded into DB via SQL conversion', 'Implemented AI chatbot — Groq LLM API integration, Q&A log storage, and conversation flow management', 'Integrated OpenWeatherMap API — GPS-based real-time weather data processing and display'],
     },
-    techStack: 'Java 21 · Spring Boot · MyBatis · Oracle · Next.js · TypeScript · Docker · Kubernetes','jira'
+    techStack: 'Java 21 · Spring Boot · MyBatis · Oracle · Next.js · TypeScript · Docker · Kubernetes',
     images: ['projects/univus/home.png', 'projects/univus/dashboard.png', 'projects/univus/erd.png'],
     results: {
       ko: ['관리자 대시보드에서 전체 사용자 계정 관리 및 공지사항 CRUD 기능을 구현했습니다.', 'GitHub Actions · Docker · Kubernetes(Helm) 기반 CI/CD 파이프라인을 구성하고 실배포를 완료했습니다.', '현재 커뮤니티 핵심 기능 확장을 진행 중입니다.'],
