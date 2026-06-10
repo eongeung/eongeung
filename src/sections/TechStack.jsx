@@ -15,6 +15,7 @@ const TECH_CATEGORIES = [
     badges: [
       { label: 'Java', url: 'https://img.shields.io/badge/Java-3578E5?style=for-the-badge&logo=java&logoColor=white' },
       { label: 'Spring', url: 'https://img.shields.io/badge/Spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white' },
+      { label: 'Spring Boot', url: 'https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white' },
       { label: 'Django', url: 'https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=django&logoColor=white' },
     ],
   },
@@ -24,6 +25,7 @@ const TECH_CATEGORIES = [
       { label: 'MySQL', url: 'https://img.shields.io/badge/MySQL-00758F.svg?style=for-the-badge&logo=mysql&logoColor=white' },
       { label: 'MariaDB', url: 'https://img.shields.io/badge/MariaDB-003545.svg?style=for-the-badge&logo=mariadb&logoColor=white' },
       { label: 'PostgreSQL', url: 'https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white' },
+      { label: 'Oracle', url: 'https://img.shields.io/badge/Oracle-F80000.svg?style=for-the-badge&logo=oracle&logoColor=white' },
     ],
   },
   {
@@ -52,13 +54,21 @@ const TECH_CATEGORIES = [
 const TOOLS = [
   { label: 'Git', url: 'https://img.shields.io/badge/Git-F05033.svg?style=for-the-badge&logo=git&logoColor=white' },
   { label: 'GitHub', url: 'https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=github&logoColor=white' },
-  { label: 'Notion', url: 'https://img.shields.io/badge/Notion-F3F3F3.svg?style=for-the-badge&logo=notion&logoColor=black' },
-  { label: 'Photoshop', url: 'https://img.shields.io/badge/Adobe%20Photoshop-08253c.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=37abff' },
-  { label: 'Colab', url: 'https://img.shields.io/badge/Colab-F9AB00.svg?style=for-the-badge&logo=googlecolab&logoColor=black' },
-  { label: 'VSCode', url: 'https://img.shields.io/badge/VSCode-2C2C32.svg?style=for-the-badge&logo=visual-studio-code&logoColor=22ABF3' },
   { label: 'IntelliJ', url: 'https://img.shields.io/badge/IntelliJ-000000.svg?style=for-the-badge&logo=intellij%20idea&logoColor=white' },
+  { label: 'VSCode', url: 'https://img.shields.io/badge/VSCode-2C2C32.svg?style=for-the-badge&logo=visual-studio-code&logoColor=22ABF3' },
+  { label: 'STS', url: 'https://img.shields.io/badge/Spring%20Tool%20Suite-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white' },
   { label: 'Android Studio', url: 'https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android%20studio&logoColor=white' },
   { label: 'Docker', url: 'https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white' },
+  { label: 'Kubernetes', url: 'https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white' },
+  { label: 'Postman', url: 'https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white' },
+  { label: 'DBeaver', url: 'https://img.shields.io/badge/DBeaver-382923.svg?style=for-the-badge&logo=dbeaver&logoColor=white' },
+  { label: 'SQL Developer', url: 'https://img.shields.io/badge/SQL%20Developer-F80000.svg?style=for-the-badge&logo=oracle&logoColor=white' },
+  { label: 'Apache', url: 'https://img.shields.io/badge/Apache-D22128.svg?style=for-the-badge&logo=apache&logoColor=white' },
+  { label: 'Jira', url: 'https://img.shields.io/badge/Jira-0052CC.svg?style=for-the-badge&logo=jira&logoColor=white' },
+  { label: 'VirtualBox', url: 'https://img.shields.io/badge/VirtualBox-183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white' },
+  { label: 'Notion', url: 'https://img.shields.io/badge/Notion-F3F3F3.svg?style=for-the-badge&logo=notion&logoColor=black' },
+  { label: 'Colab', url: 'https://img.shields.io/badge/Colab-F9AB00.svg?style=for-the-badge&logo=googlecolab&logoColor=black' },
+  { label: 'Photoshop', url: 'https://img.shields.io/badge/Adobe%20Photoshop-08253c.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=37abff' },
 ];
 
 function BadgeGrid({ badges }) {
