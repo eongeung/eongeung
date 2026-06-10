@@ -301,15 +301,34 @@ function ProjectModal({ project, onClose, lang }) {
         <div className="notion-section">
           <h2>05. Results</h2>
           <ul>{t(project.results).map((item, i) => <li key={i}>{item}</li>)}</ul>
-          <div className="notion-images">
-            {project.images.map((img, i) => (
-              <img key={i} src={`${BASE}assets/images/${img}`} alt={`${project.name} ${i + 1}`} className="notion-img" />
-            ))}
-          </div>
+          {project.images.filter(img => !img.toLowerCase().includes('erd')).length > 0 && (
+            <div className="notion-images">
+              {project.images.filter(img => !img.toLowerCase().includes('erd')).map((img, i) => (
+                <div key={i} className="notion-img-block">
+                  <span className="notion-img-caption">Screenshot {i + 1}</span>
+                  <img src={`${BASE}assets/images/${img}`} alt={`${project.name} ${i + 1}`} className="notion-img" />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
+        {project.images.filter(img => img.toLowerCase().includes('erd')).length > 0 && (
+          <div className="notion-section">
+            <h2>06. ERD</h2>
+            <div className="notion-images">
+              {project.images.filter(img => img.toLowerCase().includes('erd')).map((img, i) => (
+                <div key={i} className="notion-img-block">
+                  <span className="notion-img-caption">ERD {project.images.filter(img => img.toLowerCase().includes('erd')).length > 1 ? i + 1 : ''}</span>
+                  <img src={`${BASE}assets/images/${img}`} alt={`${project.name} ERD`} className="notion-img" />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="notion-section">
-          <h2>06. Insight</h2>
+          <h2>{project.images.filter(img => img.toLowerCase().includes('erd')).length > 0 ? '07.' : '06.'} Insight</h2>
           <p>{t(project.insight)}</p>
         </div>
       </div>

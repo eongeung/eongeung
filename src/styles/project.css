@@ -238,12 +238,12 @@ h1::after {
 .notion-divider {
   border: none;
   border-top: 1px solid #e2e8f0;
-  margin: 20px 0 28px;
+  margin: 28px 0 40px;
 }
 
 /* ===== Sections ===== */
 .notion-section {
-  margin-bottom: 28px;
+  margin-bottom: 40px;
 }
 
 .notion-section h2 {
@@ -252,7 +252,7 @@ h1::after {
   color: #94a3b8;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   text-align: left;
 }
 
@@ -263,7 +263,7 @@ h1::after {
 .notion-section p {
   font-size: 0.93rem;
   color: #475569;
-  line-height: 1.85;
+  line-height: 1.95;
   margin: 0;
 }
 
@@ -272,21 +272,36 @@ h1::after {
   padding-left: 20px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
 }
 
 .notion-section ul li {
   font-size: 0.93rem;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ===== Result Images ===== */
 .notion-images {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
+}
+
+.notion-img-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notion-img-caption {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .notion-img {
@@ -367,4 +382,8 @@ body.dark-mode .notion-section ul li {
 
 body.dark-mode .notion-img {
   border-color: #21262d;
+}
+
+body.dark-mode .notion-img-caption {
+  color: #8b949e;
 }
