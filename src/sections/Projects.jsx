@@ -191,8 +191,8 @@ const PROJECTS = [
     },
     techStack: 'Flutter · Dart · React · Spring Boot · Ethereum · MySQL',
     images: [
+      { src: 'projects/motowallet/erd.jpeg', caption: 'Poster', isErd: false },
       { src: 'projects/motowallet/result.png', caption: 'ERD', isErd: true },
-      { src: 'projects/motowallet/erd.jpeg', caption: 'ERD (Detailed)', isErd: true },
     ],
     results: {
       ko: ['Flutter 기반 크로스플랫폼 지갑 앱 UI를 구현하고 결제 흐름을 검증했습니다.', '학술대회 프로시딩 게재 및 공모전 수상, 특허 출원을 진행했습니다.'],
