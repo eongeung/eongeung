@@ -30,7 +30,11 @@ const PROJECTS = [
       en: ['Built admin dashboard — bulk account create/update/delete, activity suspension & withdrawal, announcement CRUD', 'Collected 325 university datasets from Education Statistics Center and loaded into DB via SQL conversion', 'Implemented AI chatbot — Groq LLM API integration, Q&A log storage, and conversation flow management', 'Integrated OpenWeatherMap API — GPS-based real-time weather data processing and display'],
     },
     techStack: 'Java 21 · Spring Boot · MyBatis · Oracle · Next.js · TypeScript · Docker · Kubernetes',
-    images: ['projects/univus/home.png', 'projects/univus/dashboard.png', 'projects/univus/erd.png'],
+    images: [
+      { src: 'projects/univus/home.png', caption: 'Home', isErd: false },
+      { src: 'projects/univus/dashboard.png', caption: 'Admin Dashboard', isErd: false },
+      { src: 'projects/univus/erd.png', caption: 'ERD', isErd: true },
+    ],
     results: {
       ko: ['관리자 대시보드에서 전체 사용자 계정 관리 및 공지사항 CRUD 기능을 구현했습니다.', 'GitHub Actions · Docker · Kubernetes(Helm) 기반 CI/CD 파이프라인을 구성하고 실배포를 완료했습니다.', '현재 커뮤니티 핵심 기능 확장을 진행 중입니다.'],
       en: ['Implemented full user account management and announcement CRUD in the admin dashboard.', 'Configured CI/CD pipeline with GitHub Actions, Docker, and Kubernetes (Helm) and completed live deployment.', 'Currently expanding core community features.'],
@@ -66,7 +70,12 @@ const PROJECTS = [
       en: ['Implemented JWT-based auth and authorization', 'Designed and developed community & review APIs', 'Built real-time chat with WebSocket (STOMP)', 'Extended data features via external API integration'],
     },
     techStack: 'Java 17 · Spring Boot · JPA · MySQL · JWT · WebSocket · STOMP · React',
-    images: ['projects/pawpaw/community.png', 'projects/pawpaw/chat.png', 'projects/pawpaw/arch1.png', 'projects/pawpaw/arch2.png'],
+    images: [
+      { src: 'projects/pawpaw/community.png', caption: 'Community', isErd: false },
+      { src: 'projects/pawpaw/chat.png', caption: 'Real-time Chat', isErd: false },
+      { src: 'projects/pawpaw/arch1.png', caption: 'ERD', isErd: true },
+      { src: 'projects/pawpaw/arch2.png', caption: 'Architecture', isErd: true },
+    ],
     results: {
       ko: ['커뮤니티 게시글 작성 및 조회 기능 UI를 구현했습니다.', 'WebSocket 기반 실시간 채팅 기능을 구현하고 메시지 송수신 흐름을 확인했습니다.', '현재 산책 매칭 및 병원 리뷰 기능을 포함한 서비스 확장을 진행 중입니다.'],
       en: ['Implemented community post creation and listing UI.', 'Built WebSocket-based real-time chat and verified message flow.', 'Currently expanding to include walk matching and hospital review features.'],
@@ -102,7 +111,11 @@ const PROJECTS = [
       en: ['Designed Spring Boot REST API and full backend structure', 'Implemented JWT Access/Refresh token auth and permission logic', 'Built posts, comments, and likes APIs', 'Implemented S3 Presigned URL image upload', 'Configured CI/CD pipeline with GitHub Actions and deployed to EC2'],
     },
     techStack: 'Java 17 · Spring Boot · JPA · PostgreSQL · JWT · AWS EC2 · RDS · S3 · nginx · GitHub Actions',
-    images: ['projects/frankly/swagger.png', 'projects/frankly/arch1.png', 'projects/frankly/arch2.png'],
+    images: [
+      { src: 'projects/frankly/swagger.png', caption: 'API Docs', isErd: false },
+      { src: 'projects/frankly/arch1.png', caption: 'ERD', isErd: true },
+      { src: 'projects/frankly/arch2.png', caption: 'Architecture', isErd: true },
+    ],
     results: {
       ko: ['Swagger UI를 통해 전체 API 명세를 문서화하고 주요 기능을 검증했습니다.', 'EC2 서버에 배포 후 실제 환경에서 API 요청 및 응답 흐름을 확인했습니다.', 'REST API 구조를 기반으로 커뮤니티 서비스의 핵심 기능을 안정적으로 구현했습니다.'],
       en: ['Documented all APIs via Swagger UI and verified core features.', 'Confirmed API request/response flow in a real EC2 deployment.', 'Stably implemented core community service features with REST API.'],
@@ -138,7 +151,10 @@ const PROJECTS = [
       en: ['Implemented QR scan and stamp reward screens in Flutter', 'Designed stamp API and data storage logic with Spring Boot', 'Integrated Arduino · Raspberry Pi gacha device with app data', 'Designed full service architecture connecting app, backend, and hardware'],
     },
     techStack: 'Java · Spring Boot · MySQL · Flutter · Dart · Arduino · Raspberry Pi',
-    images: ['projects/aeropick/result.jpeg', 'projects/aeropick/erd.png'],
+    images: [
+      { src: 'projects/aeropick/result.jpeg', caption: 'Demo', isErd: false },
+      { src: 'projects/aeropick/erd.png', caption: 'ERD', isErd: true },
+    ],
     results: {
       ko: ['Flutter 앱과 Spring Boot API, 하드웨어 가챠 시스템을 연결하는 서비스 파이프라인을 구축했습니다.', 'QR 스캔부터 스탬프 적립까지 실제 동작 흐름을 검증했습니다.'],
       en: ['Built a service pipeline connecting the Flutter app, Spring Boot API, and hardware gacha system.', 'Verified the complete flow from QR scan to stamp collection.'],
@@ -174,7 +190,10 @@ const PROJECTS = [
       en: ['Built cross-platform wallet app with Flutter', 'Designed token balance and payment history UI', 'Designed data structure and screen flow for backend API integration'],
     },
     techStack: 'Flutter · Dart · React · Spring Boot · Ethereum · MySQL',
-    images: ['projects/motowallet/result.png', 'projects/motowallet/erd.jpeg'],
+    images: [
+      { src: 'projects/motowallet/result.png', caption: 'ERD', isErd: true },
+      { src: 'projects/motowallet/erd.jpeg', caption: 'ERD (Detailed)', isErd: true },
+    ],
     results: {
       ko: ['Flutter 기반 크로스플랫폼 지갑 앱 UI를 구현하고 결제 흐름을 검증했습니다.', '학술대회 프로시딩 게재 및 공모전 수상, 특허 출원을 진행했습니다.'],
       en: ['Implemented Flutter wallet app UI and verified payment flow.', 'Published academic proceedings, won competitions, and filed a patent.'],
@@ -210,7 +229,10 @@ const PROJECTS = [
       en: ['Implemented posture detection logic with Python (OpenCV · MediaPipe)', 'Designed data flow from USB camera input to robot response', 'Integrated servo motor and LED control via Arduino · Raspberry Pi', 'Designed full system architecture connecting sensors, vision, and hardware'],
     },
     techStack: 'Python · OpenCV · MediaPipe · Flutter · Arduino · Raspberry Pi',
-    images: ['projects/ondy/robot.png', 'projects/ondy/screenshot.png'],
+    images: [
+      { src: 'projects/ondy/robot.png', caption: 'Demo', isErd: false },
+      { src: 'projects/ondy/screenshot.png', caption: 'Poster', isErd: false },
+    ],
     results: {
       ko: ['USB 카메라 기반 실시간 자세 감지 시스템을 구현하고 동작을 검증했습니다.', '로봇 하드웨어와 소프트웨어가 연동되어 자세 교정 피드백을 제공하는 흐름을 구축했습니다.'],
       en: ['Implemented and verified real-time posture detection via USB camera.', 'Built an integrated flow where robot hardware and software together provide posture correction feedback.'],
@@ -246,7 +268,9 @@ const PROJECTS = [
       en: ['Implemented Django-based admin web', 'Developed pages for querying and managing helmet detection results', 'Designed data models and admin interface'],
     },
     techStack: 'Python · Django · Raspberry Pi · Arduino · YOLO',
-    images: ['projects/safetech/result.png'],
+    images: [
+      { src: 'projects/safetech/result.png', caption: 'Web UI', isErd: false },
+    ],
     results: {
       ko: ['Django 관리자 웹에서 안전모 감지 결과를 조회하고 관리하는 기능을 구현했습니다.', 'IoT 센서 데이터와 웹 시스템을 연결하는 전체 흐름을 구축했습니다.'],
       en: ['Implemented safety helmet detection result query and management in Django admin.', 'Built the full pipeline connecting IoT sensor data to the web system.'],
@@ -301,26 +325,26 @@ function ProjectModal({ project, onClose, lang }) {
         <div className="notion-section">
           <h2>05. Results</h2>
           <ul>{t(project.results).map((item, i) => <li key={i}>{item}</li>)}</ul>
-          {project.images.filter(img => !img.toLowerCase().includes('erd')).length > 0 && (
+          {project.images.filter(img => !img.isErd).length > 0 && (
             <div className="notion-images">
-              {project.images.filter(img => !img.toLowerCase().includes('erd')).map((img, i) => (
+              {project.images.filter(img => !img.isErd).map((img, i) => (
                 <div key={i} className="notion-img-block">
-                  <span className="notion-img-caption">Screenshot {i + 1}</span>
-                  <img src={`${BASE}assets/images/${img}`} alt={`${project.name} ${i + 1}`} className="notion-img" />
+                  <span className="notion-img-caption">{img.caption}</span>
+                  <img src={`${BASE}assets/images/${img.src}`} alt={img.caption} className="notion-img" />
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        {project.images.filter(img => img.toLowerCase().includes('erd')).length > 0 && (
+        {project.images.filter(img => img.isErd).length > 0 && (
           <div className="notion-section">
-            <h2>06. ERD</h2>
+            <h2>06. ERD / Architecture</h2>
             <div className="notion-images">
-              {project.images.filter(img => img.toLowerCase().includes('erd')).map((img, i) => (
+              {project.images.filter(img => img.isErd).map((img, i) => (
                 <div key={i} className="notion-img-block">
-                  <span className="notion-img-caption">ERD {project.images.filter(img => img.toLowerCase().includes('erd')).length > 1 ? i + 1 : ''}</span>
-                  <img src={`${BASE}assets/images/${img}`} alt={`${project.name} ERD`} className="notion-img" />
+                  <span className="notion-img-caption">{img.caption}</span>
+                  <img src={`${BASE}assets/images/${img.src}`} alt={img.caption} className="notion-img" />
                 </div>
               ))}
             </div>
@@ -328,7 +352,7 @@ function ProjectModal({ project, onClose, lang }) {
         )}
 
         <div className="notion-section">
-          <h2>{project.images.filter(img => img.toLowerCase().includes('erd')).length > 0 ? '07.' : '06.'} Insight</h2>
+          <h2>{project.images.filter(img => img.isErd).length > 0 ? '07.' : '06.'} Insight</h2>
           <p>{t(project.insight)}</p>
         </div>
       </div>
