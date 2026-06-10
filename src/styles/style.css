@@ -411,7 +411,7 @@ section[id] {
   text-transform: uppercase;
 }
 
-.tech-subtitle:first-of-type {
+.tech-section > div:first-child .tech-subtitle {
   margin-top: 0;
 }
 
