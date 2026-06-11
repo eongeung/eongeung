@@ -8,7 +8,7 @@ const PROJECTS = [
     id: 'univus',
     year: '2026',
     name: 'Univ-US',
-    role:    { ko: '풀스택 개발자', en: 'Full-Stack Developer' },
+    role:    { ko: '풀스택 개발자 · PL (Project Leader)', en: 'Full-Stack Developer · PL (Project Leader)' },
     summary: { ko: '대학 ERP · LMS · 커뮤니티 통합 플랫폼', en: 'University ERP · LMS · Community Platform' },
     date: '2026.06 ~ ing',
     team:    { ko: '풀스택 5', en: 'Full-Stack 5' },
