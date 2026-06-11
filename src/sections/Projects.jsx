@@ -48,10 +48,10 @@ const PROJECTS = [
     id: 'pawpaw',
     year: '2026',
     name: 'PawPaw',
-    role:    { ko: '백엔드 개발자 (주) · 프론트엔드 개발', en: 'Backend Developer (Primary) · Frontend Development' },
+    role:    { ko: '풀스택 개발자', en: 'Full-Stack Developer' },
     summary: { ko: '반려동물 종합 플랫폼', en: 'Comprehensive Pet Platform' },
     date: '2026.03 ~ ing',
-    team:    { ko: '프론트엔드 1 · 백엔드 1', en: 'Frontend 1 · Backend 1' },
+    team:    { ko: '풀스택 2', en: 'Full-Stack 2' },
     thumbnail: 'pawpaw.png',
     overview: {
       ko: '반려동물 보호자들이 정보를 공유하고 소통할 수 있는 커뮤니티 기반 서비스를 목표로, 백엔드 중심의 REST API를 설계 및 구현하고 있습니다. 커뮤니티, 산책 매칭, 병원 리뷰 기능을 포함한 구조로 설계하고 있으며, 실시간 채팅 기능을 함께 개발하고 있습니다.',
