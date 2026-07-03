@@ -1,389 +1,1239 @@
-/* ===== Projects ===== */
-
-h1 {
-  color: #0f3853;
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 0;
-  letter-spacing: -0.025em;
-}
-
-h1::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 4px;
-  background: linear-gradient(90deg, #0f3853, #4a9eca);
-  margin: 10px auto 30px;
-  border-radius: 2px;
-}
-
-/* ===== Filter Buttons ===== */
-.filter-buttons {
+/* ===== Filter Tabs ===== */
+.filter-tabs {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.filter-buttons button {
-  padding: 7px 20px;
-  background: white;
-  color: #0f3853;
-  border: 1.5px solid #0f3853;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  transition: all 0.2s ease;
-  font-family: inherit;
-}
-
-.filter-buttons button:hover {
-  background: #0f3853;
-  color: white;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(15, 56, 83, 0.22);
-}
-
-.filter-buttons button.active {
-  background: #0f3853;
-  color: white;
-  box-shadow: 0 4px 14px rgba(15, 56, 83, 0.22);
-}
-
-/* ===== Project Card Grid ===== */
-.project-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.project-card {
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(15, 56, 83, 0.08);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid #e2e8f0;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(15, 56, 83, 0.14);
-}
-
-.project-card-thumb {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  background: #f8fafc;
-}
-
-.project-card-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-card-thumb img {
-  transform: scale(1.04);
-}
-
-.project-card-body {
-  padding: 18px 20px 20px;
-}
-
-.project-card-meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.project-card-year {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #94a3b8;
-  letter-spacing: 0.06em;
-}
-
-.project-card-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #4a9eca;
-  background: #eff8ff;
-  padding: 2px 8px;
-  border-radius: 999px;
-}
-
-.project-card-name {
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: #0f3853;
-  margin: 0 0 4px;
-  letter-spacing: -0.02em;
-}
-
-.project-card-role {
-  font-size: 0.78rem;
-  color: #64748b;
-  margin: 0 0 10px;
-}
-
-.project-card-stack {
-  font-size: 0.7rem;
-  color: #94a3b8;
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* ===== Notion Modal ===== */
-.notion-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  backdrop-filter: blur(2px);
-}
-
-.notion-modal {
-  background: #fff;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 760px;
-  max-height: 90vh;
-  overflow-y: auto;
-  padding: 48px 52px 52px;
-  position: relative;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
-}
-
-.notion-close {
-  position: sticky;
-  top: 0;
-  float: right;
+.filter-tab {
+  padding: 10px 28px;
   background: none;
   border: none;
-  font-size: 1.1rem;
+  border-bottom: 2px solid transparent;
   color: #94a3b8;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: background 0.15s;
-  margin-bottom: -24px;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  margin-bottom: -1px;
 }
 
-.notion-close:hover {
-  background: #f1f5f9;
+.filter-tab:hover { color: #0f3853; }
+
+.filter-tab.active {
   color: #0f3853;
+  border-bottom-color: #4a9eca;
 }
 
-.notion-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #0f3853;
-  margin: 0 0 20px;
-  letter-spacing: -0.03em;
+/* ===== Project List ===== */
+.project-list {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: left;
 }
 
-.notion-title::after {
-  display: none;
+/* Pinned / Featured */
+.pl-pinned {
+  padding: 28px 28px 22px;
+  margin: 0 0 20px;
+  border: 1px solid rgba(74, 158, 202, 0.35);
+  border-top: 3px solid #4a9eca;
+  border-radius: 0 0 10px 10px;
+  background: rgba(74, 158, 202, 0.05);
+  box-shadow: 0 4px 20px rgba(74, 158, 202, 0.08);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
 }
 
-/* ===== Properties ===== */
-.notion-props {
+.pl-pinned:hover {
+  background: rgba(74, 158, 202, 0.09);
+  border-color: rgba(74, 158, 202, 0.55);
+  border-top-color: #4a9eca;
+  box-shadow: 0 6px 28px rgba(74, 158, 202, 0.14);
+}
+
+.plp-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.plp-eyebrow > span:first-child {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #4a9eca;
+  background: rgba(74, 158, 202, 0.12);
+  border: 1px solid rgba(74, 158, 202, 0.35);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.plp-active {
+  font-size: 0.56rem;
+  color: white;
+  background: #22c55e;
+  padding: 1px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+}
+
+.plp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  gap: 16px;
+}
+
+.plp-name {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #c9d1d9;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.plp-year {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-family: 'SF Mono', monospace;
+  white-space: nowrap;
+}
+
+.plp-summary {
+  font-size: 1.04rem;
+  color: #8b949e;
+  margin: 0 0 16px;
+  line-height: 1.6;
+  max-width: none;
+}
+
+.plp-hl {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 20px;
+  gap: 7px;
 }
 
-.notion-prop {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.86rem;
+.plp-hl li {
+  font-size: 0.92rem;
+  color: #8b949e;
+  padding-left: 16px;
+  position: relative;
   line-height: 1.6;
 }
 
-.prop-key {
-  min-width: 72px;
-  color: #94a3b8;
-  font-weight: 600;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  padding-top: 1px;
+.plp-hl li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #4a9eca;
+  font-size: 0.72rem;
 }
 
-.prop-val {
-  color: #334155;
-  font-weight: 500;
-  flex: 1;
-}
-
-.notion-divider {
-  border: none;
-  border-top: 1px solid #e2e8f0;
-  margin: 28px 0 40px;
-}
-
-/* ===== Sections ===== */
-.notion-section {
-  margin-bottom: 40px;
-}
-
-.notion-section h2 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #94a3b8;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 0 0 14px;
-  text-align: left;
-}
-
-.notion-section h2::after {
-  display: none;
-}
-
-.notion-section p {
-  font-size: 0.93rem;
-  color: #475569;
-  line-height: 1.95;
-  margin: 0;
-}
-
-.notion-section ul {
-  margin: 0;
-  padding-left: 20px;
+.plp-footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.notion-section ul li {
-  font-size: 0.93rem;
-  color: #475569;
-  line-height: 1.75;
+.plp-role {
+  font-size: 0.76rem;
+  color: #94a3b8;
+  font-family: 'SF Mono', monospace;
 }
 
-/* ===== Result Images ===== */
-.notion-images {
-  margin-top: 20px;
+.plp-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.plp-cta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #4a9eca;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+  margin-left: auto;
+}
+
+.pl-pinned:hover .plp-cta {
+  color: #2a7fb0;
+}
+
+/* ===== GitHub Button ===== */
+.proj-github-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: #4a9eca;
+  background: rgba(74, 158, 202, 0.08);
+  border: 1px solid rgba(74, 158, 202, 0.3);
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.proj-github-btn:hover {
+  background: rgba(74, 158, 202, 0.18);
+  border-color: rgba(74, 158, 202, 0.55);
+}
+
+.proj-github-sm {
+  font-size: 0.58rem;
+  padding: 2px 7px;
+}
+
+.modal-github-btn {
+  font-size: 0.62rem;
+  padding: 3px 10px;
+}
+
+.modal-report-btn {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.modal-report-btn:hover {
+  background: rgba(167, 139, 250, 0.18);
+  border-color: rgba(167, 139, 250, 0.55);
+}
+
+body.dark-mode .proj-github-btn {
+  color: #79c0ff;
+  background: rgba(56, 139, 253, 0.1);
+  border-color: rgba(56, 139, 253, 0.3);
+}
+
+body.dark-mode .proj-github-btn:hover {
+  background: rgba(56, 139, 253, 0.2);
+  border-color: rgba(56, 139, 253, 0.5);
+}
+
+/* List label */
+.pl-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding: 24px 10px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  margin: 0 -10px;
+}
+
+/* Regular project rows */
+.pl-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 0 16px;
+  padding: 20px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.14s;
+  align-items: start;
+  border-radius: 4px;
+  margin: 0 -10px;
+}
+
+.pl-row:hover {
+  background: rgba(74, 158, 202, 0.05);
+}
+
+.pl-num {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  font-family: 'SF Mono', monospace;
+  padding-top: 3px;
+  letter-spacing: 0.02em;
+}
+
+.pl-info { text-align: left; min-width: 0; }
+
+.pl-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #c9d1d9;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pl-badge-active {
+  font-size: 0.52rem;
+  color: white;
+  background: #22c55e;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'SF Mono', monospace;
+  letter-spacing: 0.08em;
+}
+
+.pl-sum {
+  font-size: 0.94rem;
+  color: #8b949e;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  max-width: none;
+}
+
+.pl-meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: 'SF Mono', monospace;
+  line-height: 1.4;
+}
+
+.pl-side {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 0;
 }
 
-.notion-img-block {
+.pl-year {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: 'SF Mono', monospace;
+  white-space: nowrap;
+}
+
+.pl-arrow {
+  font-size: 1rem;
+  color: #c0ccd8;
+  transition: transform 0.18s, color 0.18s;
+  margin-top: 2px;
+}
+
+.pl-row:hover .pl-arrow {
+  color: #4a9eca;
+  transform: translateX(4px);
+}
+
+/* ===== Row contribution bullets ===== */
+.pl-contrib {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pl-contrib li {
+  font-size: 0.72rem;
+  color: #8b949e;
+  padding-left: 13px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pl-contrib li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-size: 0.62rem;
+}
+
+/* ===== Contribution Table (in modal) ===== */
+.ms-contrib-section {
+  background: rgba(34, 197, 94, 0.04);
+  border: 1px solid rgba(34, 197, 94, 0.18);
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin: 0;
+}
+
+.contrib-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2px;
+}
+
+.contrib-table tr {
+  border-bottom: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.contrib-table tr:last-child { border-bottom: none; }
+
+.contrib-idx {
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: #22c55e;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding: 9px 16px 9px 0;
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.contrib-item {
+  font-size: 0.94rem;
+  color: #c9d1d9;
+  line-height: 1.7;
+  padding: 9px 0;
+}
+
+/* ===== Tech Chips ===== */
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tech-chip {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.chip-green  { background: #0a2e1a; color: #4ade80; border-color: #166534; }
+.chip-cyan   { background: #012836; color: #38bdf8; border-color: #0c4a6e; }
+.chip-blue   { background: #172554; color: #93c5fd; border-color: #1e3a8a; }
+.chip-violet { background: #2e1065; color: #c4b5fd; border-color: #4c1d95; }
+.chip-red    { background: #450a0a; color: #fca5a5; border-color: #7f1d1d; }
+.chip-slate  { background: #1e293b; color: #94a3b8; border-color: #334155; }
+.chip-amber  { background: #451a03; color: #fde68a; border-color: #78350f; }
+.chip-pink   { background: #4a0d28; color: #f9a8d4; border-color: #831843; }
+.chip-purple { background: #2e1065; color: #d8b4fe; border-color: #6b21a8; }
+.chip-teal   { background: #042f2e; color: #5eead4; border-color: #134e4a; }
+.chip-default{ background: #161b22; color: #8b949e; border-color: #30363d; }
+.chip-more   { background: transparent; color: #8b949e; border-color: #30363d; }
+
+/* ===== Modal Overlay ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.modal-sheet {
+  background: #161b22;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1060px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  text-align: left;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  line-height: 1;
+  padding: 0;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+  color: white;
+}
+
+/* ===== Modal Header (dark) ===== */
+.modal-header {
+  background: linear-gradient(135deg, #0c2d45 0%, #1a4f73 100%);
+  padding: 28px 52px 24px 32px;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header-featured {
+  background: linear-gradient(135deg, #050d1a 0%, #0b1f3a 45%, #0d2a45 100%);
+  border-top: 2px solid #388bfd;
+  border-radius: 12px 12px 0 0;
+  padding: 28px 52px 24px 32px;
+}
+
+.modal-featured-badge {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #79c0ff;
+  background: rgba(56, 139, 253, 0.15);
+  border: 1px solid rgba(56, 139, 253, 0.35);
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.modal-header-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.modal-year {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.1em;
+}
+
+.modal-live {
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: white;
+  background: #22c55e;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.modal-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 6px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.modal-title::after { display: none; }
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* ===== Modal Info Section ===== */
+.modal-info {
+  padding: 20px 32px;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-props {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+}
+
+.mprop {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 220px;
+  flex: 1;
+  padding: 3px 0;
+}
+
+.mk {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  min-width: 48px;
+}
+
+.mv {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  font-weight: 500;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  margin-bottom: 8px;
+}
+
+.modal-stack .tech-chips { gap: 5px; }
+.modal-stack .tech-chip { font-size: 0.65rem; padding: 3px 9px; }
+
+/* ===== Team Breakdown ===== */
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.team-table td {
+  font-size: 0.82rem;
+  padding: 6px 10px;
+  border-bottom: 1px solid #21262d;
+  color: #8b949e;
+}
+
+.team-table .team-member {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #8b949e;
+  width: 1%;
+  padding-right: 16px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.78rem;
+}
+
+.team-table tr.team-self td {
+  background: #0d2137;
+  color: #79c0ff;
+  font-weight: 700;
+}
+
+/* ===== Modal Body ===== */
+.modal-body {
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ms-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ms-label::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 11px;
+  background: #4a9eca;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.ms-text {
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  line-height: 1.9;
+  margin: 0;
+  text-align: left;
+  max-width: 100%;
+}
+
+.ms-bg-problem {
+  margin-top: 14px;
+}
+
+.ms-insight-block {
+  background: rgba(74, 158, 202, 0.07);
+  border: 1px solid rgba(74, 158, 202, 0.18);
+  border-left: 3px solid #4a9eca;
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+}
+
+.ms-insight-text {
+  font-size: 0.92rem;
+  color: #c9d1d9;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.ms-insight {
+  font-style: italic;
+  color: #8b949e;
+  border-left: 3px solid #388bfd;
+  padding-left: 14px;
+}
+
+.ms-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-list li {
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  line-height: 1.75;
+  padding-left: 18px;
+  position: relative;
+}
+
+.ms-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #388bfd;
+  font-weight: 700;
+}
+
+.ms-contrib li::before {
+  content: '✓';
+  color: #3fb950;
+}
+
+/* ===== Modal Images ===== */
+.ms-images {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.ms-figure {
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.notion-img-caption {
+.ms-figure img {
+  border-radius: 7px;
+  border: 1px solid #21262d;
+}
+
+.ms-thumb {
+  overflow: hidden;
+  height: 200px;
+  border-radius: 7px;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: zoom-in;
+}
+
+.ms-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: opacity 0.15s;
+}
+
+.ms-thumb:hover img {
+  opacity: 0.85;
+}
+
+/* ===== Lightbox ===== */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(6px);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  z-index: 3001;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: white;
+}
+
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: calc(95vh - 48px);
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  cursor: default;
+}
+
+.lightbox-caption {
   font-size: 0.72rem;
-  font-weight: 700;
-  color: #94a3b8;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-align: center;
+  margin: 0;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.ms-figure figcaption {
+  font-size: 0.68rem;
+  color: #8b949e;
+  font-family: 'SF Mono', 'Fira Code', monospace;
   text-align: left;
 }
 
-.notion-img {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 2px 10px rgba(15, 56, 83, 0.06);
+/* ===== Tech Choices ===== */
+.tr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
+
+.tr-item {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.tr-item:last-child { border-bottom: none; }
+
+.tr-tech {
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  color: #4a9eca;
+  white-space: nowrap;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.tr-reason {
+  font-size: 0.88rem;
+  color: #c9d1d9;
+  line-height: 1.7;
+}
+
+/* Retrospective — amber accent 으로 insight와 구분 */
+.ms-retro-block {
+  background: rgba(251, 191, 36, 0.05);
+  border: 1px solid rgba(251, 191, 36, 0.18);
+  border-left: 3px solid #fbbf24;
+}
+
+/* Light mode */
+body.light-mode .tr-item { border-bottom-color: rgba(0,0,0,0.07); }
+body.light-mode .tr-tech { color: #0969da; }
+body.light-mode .tr-reason { color: #24292f; }
+body.light-mode .ms-retro-block {
+  background: rgba(251,191,36,0.04);
+  border-color: rgba(251,191,36,0.22);
+  border-left-color: #d97706;
+}
+
+/* Dark mode */
+body.dark-mode .tr-item { border-bottom-color: rgba(255,255,255,0.05); }
+body.dark-mode .tr-tech { color: #79c0ff; }
+body.dark-mode .tr-reason { color: #c9d1d9; }
+body.dark-mode .ms-retro-block {
+  background: rgba(251,191,36,0.05);
+  border-color: rgba(251,191,36,0.16);
+  border-left-color: #fbbf24;
+}
+
+/* ===== Troubleshooting ===== */
+.ts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ts-item {
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-left: 3px solid #8b5cf6;
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ts-issue {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #e6edf3;
+  line-height: 1.5;
+}
+
+.ts-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ts-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ts-tag-cause {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.ts-tag-fix {
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+}
+
+.ts-body {
+  font-size: 0.92rem;
+  color: #c9d1d9;
+  line-height: 1.7;
+}
+
+/* Light mode */
+body.light-mode .ts-item {
+  background: rgba(139, 92, 246, 0.04);
+  border-color: rgba(139, 92, 246, 0.18);
+  border-left-color: #7c3aed;
+}
+body.light-mode .ts-issue { color: #1f2328; }
+body.light-mode .ts-body { color: #24292f; }
+body.light-mode .ts-tag-cause { color: #b45309; background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.35); }
+body.light-mode .ts-tag-fix { color: #0e7490; background: rgba(34,211,238,0.07); border-color: rgba(34,211,238,0.3); }
 
 /* ===== Dark Mode ===== */
-body.dark-mode .filter-buttons button {
-  background: #161b22;
-  border-color: #388bfd;
+body.dark-mode .pl-contrib li { color: #b1bac4; }
+body.dark-mode .pl-contrib li::before { color: #3fb950; }
+
+body.dark-mode .ms-contrib-section {
+  background: rgba(63, 185, 80, 0.05);
+  border-color: rgba(63, 185, 80, 0.14);
+}
+
+body.dark-mode .contrib-table tr { border-bottom-color: rgba(63, 185, 80, 0.08); }
+body.dark-mode .contrib-idx { color: #3fb950; }
+body.dark-mode .contrib-item { color: #c9d1d9; }
+
+body.dark-mode .filter-tabs { border-bottom-color: #21262d; }
+body.dark-mode .filter-tab { color: #8b949e; }
+body.dark-mode .filter-tab:hover,
+body.dark-mode .filter-tab.active { color: #79c0ff; }
+body.dark-mode .filter-tab.active { border-bottom-color: #388bfd; }
+
+body.dark-mode .pl-pinned {
+  border-color: rgba(56, 139, 253, 0.3);
+  border-top-color: #388bfd;
+  background: rgba(56, 139, 253, 0.06);
+  box-shadow: 0 4px 20px rgba(56, 139, 253, 0.1);
+}
+
+body.dark-mode .pl-pinned:hover {
+  background: rgba(56, 139, 253, 0.1);
+  border-color: rgba(56, 139, 253, 0.5);
+  border-top-color: #388bfd;
+  box-shadow: 0 6px 28px rgba(56, 139, 253, 0.16);
+}
+
+body.dark-mode .plp-eyebrow > span:first-child {
   color: #79c0ff;
+  background: rgba(56, 139, 253, 0.12);
+  border-color: rgba(56, 139, 253, 0.3);
 }
 
-body.dark-mode .filter-buttons button:hover,
-body.dark-mode .filter-buttons button.active {
-  background: #388bfd;
-  color: #0d1117;
-  box-shadow: 0 4px 14px rgba(56, 139, 253, 0.3);
-}
+body.dark-mode .plp-summary { color: #c9d1d9; }
+body.dark-mode .plp-hl li { color: #c9d1d9; }
+body.dark-mode .plp-cta { color: #79c0ff; }
+body.dark-mode .pl-pinned:hover .plp-cta { color: #58a6e6; }
 
-body.dark-mode .project-card {
-  background: #161b22;
-  border-color: #21262d;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
+body.dark-mode .pl-arrow { color: #4e5866; }
+body.dark-mode .pl-row:hover .pl-arrow { color: #388bfd; }
+body.dark-mode .plp-name { color: #e6edf3; }
+body.dark-mode .plp-year { color: #a0adb8; }
+body.dark-mode .plp-summary { color: #c9d1d9; }
 
-body.dark-mode .project-card:hover {
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-}
+body.dark-mode .plp-hl li { color: #b1bac4; }
+body.dark-mode .plp-hl li::before { color: #388bfd; }
+body.dark-mode .plp-role { color: #8b949e; }
 
-body.dark-mode .project-card-thumb {
-  background: #0d1117;
-}
-
-body.dark-mode .project-card-name {
-  color: #79c0ff;
-}
-
-body.dark-mode .project-card-role,
-body.dark-mode .project-card-stack {
+body.dark-mode .pl-label {
   color: #8b949e;
+  border-bottom-color: #21262d;
 }
 
-body.dark-mode .project-card-tag {
-  background: #0d2137;
-  color: #79c0ff;
+body.dark-mode .pl-row { border-bottom-color: #21262d; }
+body.dark-mode .pl-row:hover { background: rgba(56, 139, 253, 0.05); }
+body.dark-mode .pl-num { color: #4e5866; }
+body.dark-mode .pl-name { color: #e6edf3; }
+body.dark-mode .pl-sum { color: #c9d1d9; }
+body.dark-mode .pl-meta { color: #a0adb8; }
+body.dark-mode .pl-year { color: #a0adb8; }
+
+body.dark-mode .modal-sheet { background: #161b22; }
+body.dark-mode .modal-header { background: linear-gradient(135deg, #060d14 0%, #0c1f2e 100%); }
+body.dark-mode .modal-info { background: #0d1117; border-bottom-color: #21262d; }
+body.dark-mode .mv { color: #c9d1d9; }
+
+body.dark-mode .modal-close {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+body.dark-mode .modal-close:hover { background: rgba(255, 255, 255, 0.18); }
+
+body.dark-mode .team-table td { border-bottom-color: #21262d; color: #8b949e; }
+body.dark-mode .team-table .team-member { color: #8b949e; }
+body.dark-mode .team-table tr.team-self td { background: #0d2137; color: #79c0ff; }
+
+body.dark-mode .ms-text,
+body.dark-mode .ms-list li { color: #c9d1d9; }
+body.dark-mode .ms-insight { color: #8b949e; border-left-color: #388bfd; }
+body.dark-mode .ms-insight-block {
+  background: rgba(74, 158, 202, 0.06);
+  border-color: rgba(74, 158, 202, 0.16);
+  border-left-color: #4a9eca;
+}
+body.dark-mode .ms-insight-text { color: #c9d1d9; }
+body.dark-mode .ms-list li::before { color: #388bfd; }
+body.dark-mode .ms-contrib li::before { color: #3fb950; }
+body.dark-mode .ms-figure figcaption { color: #8b949e; }
+body.dark-mode .modal-header-featured { border-top-color: #388bfd; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .plp-header { flex-direction: column; gap: 2px; }
+  .plp-name { font-size: 1.2rem; }
+
+  .pl-row {
+    grid-template-columns: 32px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 12px;
+  }
+
+  .pl-side {
+    grid-column: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .modal-header,
+  .modal-header-featured { padding: 22px 22px 18px; }
+  .modal-title { font-size: 1.5rem; }
+  .modal-info { padding: 16px 22px; }
+  .modal-props { flex-direction: column; }
+  .mprop { min-width: unset; }
+  .modal-body { padding: 18px 22px 26px; gap: 22px; }
+  .ms-images { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
+  .ms-thumb { height: 140px; }
 }
 
-body.dark-mode .notion-modal {
-  background: #161b22;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+/* ===== Light Mode ===== */
+body.light-mode .filter-tabs { border-bottom-color: #d0d7de; }
+body.light-mode .filter-tab { color: #57606a; }
+body.light-mode .filter-tab:hover { color: #1f2328; }
+body.light-mode .filter-tab.active { color: #0969da; border-bottom-color: #0969da; }
+
+body.light-mode .pl-pinned {
+  border-color: rgba(9, 105, 218, 0.25);
+  border-top-color: #0969da;
+  background: rgba(9, 105, 218, 0.03);
+  box-shadow: 0 4px 20px rgba(9, 105, 218, 0.06);
+}
+body.light-mode .pl-pinned:hover {
+  background: rgba(9, 105, 218, 0.07);
+  border-color: rgba(9, 105, 218, 0.4);
+  border-top-color: #0969da;
+  box-shadow: 0 6px 28px rgba(9, 105, 218, 0.1);
+}
+body.light-mode .plp-eyebrow > span:first-child {
+  color: #0969da;
+  background: rgba(9, 105, 218, 0.08);
+  border-color: rgba(9, 105, 218, 0.3);
+}
+body.light-mode .plp-name { color: #1f2328; }
+body.light-mode .plp-year { color: #57606a; }
+body.light-mode .plp-summary { color: #24292f; }
+body.light-mode .plp-hl li { color: #24292f; }
+body.light-mode .plp-hl li::before { color: #0969da; }
+body.light-mode .plp-role { color: #57606a; }
+body.light-mode .plp-cta { color: #0969da; }
+body.light-mode .pl-pinned:hover .plp-cta { color: #0550ae; }
+
+body.light-mode .pl-label { color: #57606a; border-bottom-color: #d0d7de; }
+
+body.light-mode .pl-row { border-bottom-color: #eaeef2; }
+body.light-mode .pl-row:hover { background: rgba(9, 105, 218, 0.04); }
+body.light-mode .pl-num { color: #d0d7de; }
+body.light-mode .pl-name { color: #1f2328; }
+body.light-mode .pl-sum { color: #57606a; }
+body.light-mode .pl-meta { color: #6e7681; }
+body.light-mode .pl-year { color: #57606a; }
+body.light-mode .pl-arrow { color: #bbc8d4; }
+body.light-mode .pl-row:hover .pl-arrow { color: #0969da; }
+body.light-mode .pl-contrib li { color: #24292f; }
+body.light-mode .pl-contrib li::before { color: #1a7f37; }
+
+body.light-mode .pl-badge-active { background: #1a7f37; }
+body.light-mode .plp-active { background: #1a7f37; }
+
+/* Tech chips in light mode */
+body.light-mode .chip-green  { background: #dafbe1; color: #116329; border-color: #acd8b0; }
+body.light-mode .chip-cyan   { background: #ddf4ff; color: #0550ae; border-color: #aacfe6; }
+body.light-mode .chip-blue   { background: #dbeafe; color: #1d4ed8; border-color: #93c5fd; }
+body.light-mode .chip-violet { background: #ede9fe; color: #6d28d9; border-color: #c4b5fd; }
+body.light-mode .chip-red    { background: #fff0f0; color: #b91c1c; border-color: #fca5a5; }
+body.light-mode .chip-slate  { background: #f1f5f9; color: #475569; border-color: #cbd5e1; }
+body.light-mode .chip-amber  { background: #fffbeb; color: #92400e; border-color: #fde68a; }
+body.light-mode .chip-pink   { background: #fdf2f8; color: #9d174d; border-color: #f9a8d4; }
+body.light-mode .chip-purple { background: #f5f3ff; color: #7c3aed; border-color: #ddd6fe; }
+body.light-mode .chip-teal   { background: #f0fdfa; color: #0f766e; border-color: #99f6e4; }
+body.light-mode .chip-default{ background: #f6f8fa; color: #57606a; border-color: #d0d7de; }
+body.light-mode .chip-more   { background: transparent; color: #57606a; border-color: #d0d7de; }
+
+/* GitHub button in light */
+body.light-mode .proj-github-btn {
+  color: #0969da;
+  background: rgba(9, 105, 218, 0.06);
+  border-color: rgba(9, 105, 218, 0.25);
+}
+body.light-mode .proj-github-btn:hover {
+  background: rgba(9, 105, 218, 0.14);
+  border-color: rgba(9, 105, 218, 0.45);
 }
 
-body.dark-mode .notion-title {
-  color: #79c0ff;
+/* Modal in light */
+body.light-mode .modal-overlay { background: rgba(0, 0, 0, 0.35); }
+body.light-mode .modal-sheet { background: #ffffff; }
+body.light-mode .modal-header {
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
 }
+body.light-mode .modal-header-featured {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 45%, #e0f2fe 100%);
+  border-top-color: #0969da;
+}
+body.light-mode .modal-title { color: #1f2328; }
+body.light-mode .modal-subtitle { color: #57606a; }
+body.light-mode .modal-year { color: rgba(0,0,0,0.45); }
+body.light-mode .modal-featured-badge {
+  color: #0969da;
+  background: rgba(9, 105, 218, 0.1);
+  border-color: rgba(9, 105, 218, 0.3);
+}
+body.light-mode .modal-close {
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.18);
+  color: rgba(0,0,0,0.6);
+}
+body.light-mode .modal-close:hover { background: rgba(0,0,0,0.15); color: #1f2328; }
 
-body.dark-mode .notion-close:hover {
-  background: #21262d;
-  color: #79c0ff;
-}
+body.light-mode .modal-info { background: #f6f8fa; border-bottom-color: #d0d7de; }
+body.light-mode .mk { color: #57606a; }
+body.light-mode .mv { color: #1f2328; }
 
-body.dark-mode .notion-prop .prop-val {
-  color: #c9d1d9;
-}
+body.light-mode .team-table td { border-bottom-color: #d0d7de; color: #57606a; }
+body.light-mode .team-table .team-member { color: #57606a; }
+body.light-mode .team-table tr.team-self td { background: #dbeafe; color: #0550ae; }
 
-body.dark-mode .notion-divider {
-  border-top-color: #21262d;
+body.light-mode .ms-label::before { background: #0969da; }
+body.light-mode .ms-text { color: #24292f; }
+body.light-mode .ms-list li { color: #24292f; }
+body.light-mode .ms-list li::before { color: #0969da; }
+body.light-mode .ms-contrib li::before { color: #1a7f37; }
+body.light-mode .ms-insight-block {
+  background: rgba(9, 105, 218, 0.04);
+  border-color: rgba(9, 105, 218, 0.18);
+  border-left-color: #0969da;
 }
+body.light-mode .ms-insight-text { color: #24292f; }
+body.light-mode .ms-figure figcaption { color: #57606a; }
+body.light-mode .ms-figure img { border-color: #d0d7de; }
 
-body.dark-mode .notion-section p,
-body.dark-mode .notion-section ul li {
-  color: #8b949e;
+body.light-mode .ms-contrib-section {
+  background: rgba(26, 127, 55, 0.04);
+  border-color: rgba(26, 127, 55, 0.18);
 }
-
-body.dark-mode .notion-img {
-  border-color: #21262d;
-}
-
-body.dark-mode .notion-img-caption {
-  color: #8b949e;
-}
+body.light-mode .contrib-table tr { border-bottom-color: rgba(26, 127, 55, 0.1); }
+body.light-mode .contrib-idx { color: #1a7f37; }
+body.light-mode .contrib-item { color: #1f2328; }
