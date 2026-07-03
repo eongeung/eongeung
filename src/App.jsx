@@ -1,43 +1,57 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { LangProvider } from './contexts/LangContext';
+import { useState, useEffect } from 'react';
+import useReveal from './hooks/useReveal';
 import ProgressBar from './components/ProgressBar';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import ToTopButton from './components/ToTopButton';
 import About from './sections/About';
-import TechStack from './sections/TechStack';
-import Career from './sections/Career';
 import Projects from './sections/Projects';
-import Award from './sections/Award';
+import TechStack from './sections/TechStack';
 import Experience from './sections/Experience';
-import License from './sections/License';
+import AwardsLicenses from './sections/AwardsLicenses';
 import Contact from './sections/Contact';
 import NotFound from './pages/NotFound';
 
+
+function ScrollToTop() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <button
+      className={`scroll-top-btn${visible ? ' visible' : ''}`}
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      aria-label="맨 위로"
+    >
+      ↑
+    </button>
+  );
+}
+
 function Main() {
+  useReveal();
   return (
     <ThemeProvider>
       <LangProvider>
         <ProgressBar />
-        <div className="background-wrapper">
-          <div className="side" />
-          <div className="middle" />
-          <div className="side" />
-        </div>
         <Nav />
         <Hero />
         <div className="main-content">
           <About />
-          <TechStack />
-          <Career />
           <Projects />
-          <Award />
+          <TechStack />
+          <AwardsLicenses />
           <Experience />
-          <License />
           <Contact />
         </div>
-        <ToTopButton />
+        <ScrollToTop />
       </LangProvider>
     </ThemeProvider>
   );

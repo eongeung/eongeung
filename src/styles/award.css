@@ -1,200 +1,266 @@
-/* ===== Experience / Award / License ===== */
-
-.experience-section,
-.license-section {
-  text-align: center;
-}
-
-.experience-section h1,
-.license-section h1 {
-  color: #0f3853;
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 0;
-  text-align: center;
-  letter-spacing: -0.025em;
-}
-
-/* ===== Carousel ===== */
-.carousel-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.carousel-btn {
-  flex-shrink: 0;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1.5px solid #0f3853;
-  background: white;
-  color: #0f3853;
-  font-size: 1.4rem;
-  line-height: 1;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  box-shadow: 0 2px 10px rgba(15, 56, 83, 0.1);
-}
-
-.carousel-btn:hover {
-  background: #0f3853;
-  color: white;
-  transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(15, 56, 83, 0.25);
-}
-
-.experience-carousel {
-  flex: 1;
-  display: flex;
-  gap: 20px;
-  padding: 20px 4px;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.experience-carousel::-webkit-scrollbar {
-  display: none;
-}
-
-/* ===== Experience Cards ===== */
-.experience-entry {
-  flex: 0 0 290px;
-  scroll-snap-align: start;
-  background: white;
-  border-left: 4px solid #0f3853;
-  padding: 26px 24px;
-  border-radius: 14px;
-  box-shadow: 0 3px 16px rgba(15, 56, 83, 0.08);
+/* ===== Experience List ===== */
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: left;
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
-.experience-entry:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(15, 56, 83, 0.14);
-}
-
-.experience-entry h2 {
-  font-size: 1rem;
-  color: #0f3853;
-  margin-bottom: 8px;
+.exp-col-label {
+  font-size: 0.72rem;
   font-weight: 700;
+  color: #388bfd;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #21262d;
+}
+
+.exp-row {
+  display: flex;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid #21262d;
+}
+
+.exp-period {
+  font-size: 0.72rem;
+  color: #a0adb8;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.exp-body {
+  min-width: 0;
+}
+
+.exp-name {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 3px;
   letter-spacing: -0.01em;
 }
 
-.experience-entry span {
-  display: block;
-  font-size: 0.82rem;
-  color: #94a3b8;
-  margin-bottom: 14px;
-  font-weight: 500;
+.exp-desc {
+  font-size: 0.84rem;
+  color: #a0adb8;
+  line-height: 1.55;
 }
 
-.experience-entry p {
-  font-size: 0.9rem;
-  color: #475569;
-  line-height: 1.75;
-  margin: 0;
-  max-width: none;
+/* ===== Awards & Licenses 2-column ===== */
+.al-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 0 60px;
+  align-items: stretch;
+}
+
+.al-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-col .award-list,
+.al-col .license-list {
+  flex: 1;
+}
+
+.al-col-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #388bfd;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #21262d;
+}
+
+/* ===== Award List ===== */
+.award-list {
+  text-align: left;
+}
+
+.award-row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 0 20px;
+  align-items: baseline;
+  padding: 16px 8px;
+  border-bottom: 1px solid #21262d;
+  border-radius: 4px;
+  transition: background 0.14s;
+  margin: 0 -8px;
+}
+
+.award-row:hover {
+  background: rgba(56, 139, 253, 0.06);
+}
+
+.award-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #4e5866;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.04em;
+}
+
+.award-body {
+  min-width: 0;
+}
+
+.award-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 3px;
+  letter-spacing: -0.01em;
+}
+
+.award-sub {
+  font-size: 0.88rem;
+  color: #a0adb8;
+  line-height: 1.4;
+}
+
+.award-role {
+  font-size: 0.72rem;
+  color: #a0adb8;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  white-space: nowrap;
+  padding-left: 16px;
 }
 
 /* ===== License List ===== */
 .license-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 480px;
-  text-align: left;
-}
-
-.license-list li {
   display: flex;
+  flex-direction: column;
+}
+
+.license-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  gap: 0 20px;
   align-items: center;
-  gap: 14px;
-  padding: 22px 4px;
-  border-bottom: 1px solid #f1f5f9;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #0f3853;
-  letter-spacing: -0.01em;
+  padding: 14px 8px;
+  border-bottom: 1px solid #21262d;
+  transition: background 0.14s;
+  border-radius: 4px;
+  margin: 0 -8px;
 }
 
-.license-list li:last-child {
-  border-bottom: none;
+.license-row:hover {
+  background: rgba(56, 139, 253, 0.05);
 }
 
-.license-check {
-  font-size: 0.9rem;
+.license-badge {
+  font-size: 0.65rem;
   font-weight: 800;
-  color: #4a9eca;
-  flex-shrink: 0;
-}
-
-/* ===== Dark Mode ===== */
-body.dark-mode .carousel-btn {
-  background: #161b22;
-  border-color: #388bfd;
-  color: #79c0ff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .carousel-btn:hover {
-  background: #388bfd;
-  color: #0d1117;
-}
-
-body.dark-mode .experience-entry {
-  background: #161b22;
-  border-left-color: #388bfd;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.35);
-}
-
-body.dark-mode .experience-entry:hover {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
-}
-
-body.dark-mode .experience-entry h2 {
-  color: #79c0ff;
-}
-
-body.dark-mode .experience-entry span {
+  letter-spacing: 0.06em;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  text-align: center;
   color: #6e7681;
 }
 
-body.dark-mode .experience-entry p {
-  color: #8b949e;
+.lc-data    .license-badge { color: #3fb950; }
+.lc-os      .license-badge { color: #d29922; }
+.lc-network .license-badge { color: #388bfd; }
+.lc-design  .license-badge { color: #8957e5; }
+.lc-life    .license-badge { color: #6e7681; }
+
+.license-body { min-width: 0; }
+
+.license-name {
+  font-size: 1.0rem;
+  font-weight: 700;
+  color: #e6edf3;
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
 }
 
-body.dark-mode .license-list li {
-  color: #c9d1d9;
-  border-bottom-color: #21262d;
+.license-desc {
+  font-size: 0.85rem;
+  color: #a0adb8;
+  line-height: 1.4;
 }
 
-body.dark-mode .license-check {
-  color: #79c0ff;
+.license-issuer {
+  font-size: 0.7rem;
+  color: #6e7681;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  white-space: nowrap;
+  text-align: right;
 }
 
-body.dark-mode .experience-section h1,
-body.dark-mode .license-section h1 {
-  color: #79c0ff;
-}
+
+
+/* ===== Light Mode ===== */
+body.light-mode .exp-col-label { color: #0969da; border-bottom-color: #d0d7de; }
+body.light-mode .exp-row { border-bottom-color: #d0d7de; }
+body.light-mode .exp-period { color: #57606a; }
+body.light-mode .exp-name { color: #1f2328; }
+body.light-mode .exp-desc { color: #57606a; }
+
+body.light-mode .al-col-label { color: #0969da; border-bottom-color: #d0d7de; }
+
+body.light-mode .award-row { border-bottom-color: #d0d7de; }
+body.light-mode .award-row:hover { background: rgba(9, 105, 218, 0.05); }
+body.light-mode .award-num { color: #c8d4de; }
+body.light-mode .award-title { color: #1f2328; }
+body.light-mode .award-sub { color: #57606a; }
+body.light-mode .award-role { color: #57606a; }
+
+body.light-mode .license-row { border-bottom-color: #d0d7de; }
+body.light-mode .license-row:hover { background: rgba(9, 105, 218, 0.04); }
+body.light-mode .license-name { color: #1f2328; }
+body.light-mode .license-desc { color: #57606a; }
+body.light-mode .license-issuer { color: #6e7681; }
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
-  .experience-entry {
-    flex: 0 0 240px;
-    padding: 18px 16px;
+  .al-grid {
+    grid-template-columns: 1fr;
+    gap: 48px 0;
   }
 
-  .experience-entry h2 {
-    font-size: 0.92rem;
+  .exp-grid {
+    grid-template-columns: 1fr;
+    gap: 40px 0;
+  }
+
+  .exp-period {
+    min-width: 90px;
+    font-size: 0.58rem;
+  }
+
+  .award-row {
+    grid-template-columns: 30px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .award-role {
+    grid-column: 2;
+    padding-left: 0;
+    padding-top: 2px;
+  }
+
+  .license-row {
+    grid-template-columns: 36px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .license-issuer {
+    grid-column: 2;
+    text-align: left;
+    padding-top: 2px;
   }
 }

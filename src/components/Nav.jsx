@@ -1,9 +1,17 @@
-import { useTheme } from '../contexts/ThemeContext';
 import { useLang } from '../contexts/LangContext';
+import { useTheme } from '../contexts/ThemeContext';
+
+const LINKS = [
+  { id: 'about',      label: 'About' },
+  { id: 'projects',   label: 'Projects' },
+  { id: 'techstack',  label: 'Stack' },
+  { id: 'experience', label: 'Exp' },
+  { id: 'contact',    label: 'Contact' },
+];
 
 export default function Nav() {
-  const { isDark, toggle: toggleTheme } = useTheme();
   const { lang, toggle: toggleLang } = useLang();
+  const { isDark, toggle: toggleTheme } = useTheme();
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -11,22 +19,30 @@ export default function Nav() {
 
   return (
     <nav>
-      <strong>
-        {['about', 'techstack', 'career', 'projects', 'award', 'experience', 'license', 'contact'].map((id, i, arr) => (
-          <span key={id}>
-            <a href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id); }}>
-              {id.charAt(0).toUpperCase() + id.slice(1).replace('stack', ' Stack')}
-            </a>
-            {i < arr.length - 1 && <span> | </span>}
-          </span>
+      <a
+        className="nav-name"
+        href="#"
+        onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+      >
+        이영흔
+      </a>
+      <div className="nav-links">
+        {LINKS.map(({ id, label }) => (
+          <a
+            key={id}
+            href={`#${id}`}
+            onClick={(e) => { e.preventDefault(); scrollTo(id); }}
+          >
+            {label}
+          </a>
         ))}
-        <button className="btn" onClick={toggleLang} style={{ marginLeft: '12px', fontSize: '11px' }}>
-          {lang === 'ko' ? 'EN 🇺🇸' : 'KR 🇰🇷'}
+        <button className="nav-theme" onClick={toggleTheme} aria-label="테마 전환">
+          {isDark ? '☀' : '◑'}
         </button>
-        <button id="darkModeToggle" className="dark-toggle-btn" onClick={toggleTheme}>
-          {isDark ? 'OFF' : 'ON'}
+        <button className="nav-lang" onClick={toggleLang}>
+          {lang === 'ko' ? 'EN' : 'KO'}
         </button>
-      </strong>
+      </div>
     </nav>
   );
 }

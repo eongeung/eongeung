@@ -1,138 +1,125 @@
-import { useEffect, useRef } from 'react';
+const CDN = 'https://cdn.simpleicons.org';
 
-const TECH_CATEGORIES = [
+const SKILLS = [
   {
-    title: 'Front-End',
-    badges: [
-      { label: 'HTML5', url: 'https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white' },
-      { label: 'CSS3', url: 'https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white' },
-      { label: 'JavaScript', url: 'https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=20232a' },
-      { label: 'React', url: 'https://img.shields.io/badge/React-20232a.svg?style=for-the-badge&logo=react&logoColor=61DAFB' },
+    cat: 'Backend',
+    accent: '#4ade80',
+    items: [
+      { name: 'Java 17 / 21', icon: 'openjdk' },
+      { name: 'Spring Boot',  icon: 'springboot' },
+      { name: 'Spring Security', icon: 'springsecurity' },
+      { name: 'JPA',          icon: null },
+      { name: 'MyBatis',      icon: null },
+      { name: 'Django',       icon: 'django' },
     ],
   },
   {
-    title: 'Back-End',
-    badges: [
-      { label: 'Java', url: 'https://img.shields.io/badge/Java-3578E5?style=for-the-badge&logo=java&logoColor=white' },
-      { label: 'Spring', url: 'https://img.shields.io/badge/Spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white' },
-      { label: 'Spring Boot', url: 'https://img.shields.io/badge/Spring%20Boot-6DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white' },
-      { label: 'Django', url: 'https://img.shields.io/badge/Django-092E20.svg?style=for-the-badge&logo=django&logoColor=white' },
+    cat: 'Frontend / Mobile',
+    accent: '#38bdf8',
+    items: [
+      { name: 'React',        icon: 'react' },
+      { name: 'TypeScript',   icon: 'typescript' },
+      { name: 'HTML · CSS',   icon: 'html5' },
+      { name: 'Flutter',      icon: 'flutter' },
+      { name: 'Dart',         icon: 'dart' },
     ],
   },
   {
-    title: 'Database',
-    badges: [
-      { label: 'MySQL', url: 'https://img.shields.io/badge/MySQL-00758F.svg?style=for-the-badge&logo=mysql&logoColor=white' },
-      { label: 'MariaDB', url: 'https://img.shields.io/badge/MariaDB-003545.svg?style=for-the-badge&logo=mariadb&logoColor=white' },
-      { label: 'PostgreSQL', url: 'https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=postgresql&logoColor=white' },
-      { label: 'Oracle', url: 'https://img.shields.io/badge/Oracle-F80000.svg?style=for-the-badge&logo=oracle&logoColor=white' },
+    cat: 'Database',
+    accent: '#c4b5fd',
+    items: [
+      { name: 'MySQL',        icon: 'mysql' },
+      { name: 'PostgreSQL',   icon: 'postgresql' },
+      { name: 'Oracle',       icon: 'oracle' },
+      { name: 'MariaDB',      icon: 'mariadb' },
+      { name: 'Redis',        icon: 'redis' },
     ],
   },
   {
-    title: 'App',
-    badges: [
-      { label: 'Dart', url: 'https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white' },
-      { label: 'Flutter', url: 'https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white' },
+    cat: 'DevOps / Infra',
+    accent: '#94a3b8',
+    items: [
+      { name: 'Docker',         icon: 'docker' },
+      { name: 'GitHub Actions', icon: 'githubactions' },
+      { name: 'Jenkins',        icon: 'jenkins' },
+      { name: 'nginx',          icon: 'nginx' },
     ],
   },
   {
-    title: 'Programming & Data',
-    badges: [
-      { label: 'C', url: 'https://img.shields.io/badge/C-20232a.svg?style=for-the-badge&logo=c&logoColor=61DAFB' },
-      { label: 'Python', url: 'https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54' },
+    cat: 'AI / Computer Vision',
+    accent: '#fde68a',
+    items: [
+      { name: 'Python',       icon: 'python' },
+      { name: 'MediaPipe',    icon: null },
+      { name: 'Groq LLM',     icon: null },
+      { name: 'pgvector',     icon: 'postgresql' },
+      { name: 'YOLO',         icon: null },
+      { name: 'Raspberry Pi', icon: 'raspberrypi' },
     ],
   },
   {
-    title: 'H/W & IoT',
-    badges: [
-      { label: 'Arduino', url: 'https://img.shields.io/badge/Arduino-00878F.svg?style=for-the-badge&logo=arduino&logoColor=white' },
-      { label: 'Raspberry Pi', url: 'https://img.shields.io/badge/Raspberry%20Pi-A22846.svg?style=for-the-badge&logo=raspberrypi&logoColor=white' },
+    cat: 'Tools',
+    accent: '#8b949e',
+    items: [
+      { name: 'GitHub',          icon: 'github' },
+      { name: 'IntelliJ IDEA',  icon: 'intellijidea' },
+      { name: 'VSCode',         icon: 'visualstudiocode' },
+      { name: 'Android Studio', icon: 'androidstudio' },
+      { name: 'STS',            icon: 'spring' },
+    ],
+  },
+  {
+    cat: 'Etc',
+    accent: '#818cf8',
+    items: [
+      { name: 'Postman',    icon: 'postman' },
+      { name: 'Kakao API',  icon: 'kakao' },
+      { name: 'DBeaver',    icon: 'dbeaver' },
+      { name: 'Jira',       icon: 'jira' },
+      { name: 'Notion',     icon: 'notion' },
+    ],
+  },
+  {
+    cat: 'Cloud',
+    accent: '#f97316',
+    items: [
+      { name: 'AWS EC2',  icon: 'amazonec2' },
+      { name: 'AWS S3',   icon: 'amazons3' },
+      { name: 'AWS RDS',  icon: 'amazonrds' },
     ],
   },
 ];
 
-const TOOL_CATEGORIES = [
-  {
-    title: 'IDE & Dev Tools',
-    badges: [
-      { label: 'Git', url: 'https://img.shields.io/badge/Git-F05033.svg?style=for-the-badge&logo=git&logoColor=white' },
-      { label: 'GitHub', url: 'https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=github&logoColor=white' },
-      { label: 'IntelliJ', url: 'https://img.shields.io/badge/IntelliJ-000000.svg?style=for-the-badge&logo=intellij%20idea&logoColor=white' },
-      { label: 'VSCode', url: 'https://img.shields.io/badge/VSCode-2C2C32.svg?style=for-the-badge&logo=visual-studio-code&logoColor=22ABF3' },
-      { label: 'STS', url: 'https://img.shields.io/badge/Spring%20Tool%20Suite-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white' },
-      { label: 'Android Studio', url: 'https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android%20studio&logoColor=white' },
-      { label: 'Postman', url: 'https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white' },
-      { label: 'DBeaver', url: 'https://img.shields.io/badge/DBeaver-382923.svg?style=for-the-badge&logo=dbeaver&logoColor=white' },
-      { label: 'SQL Developer', url: 'https://img.shields.io/badge/SQL%20Developer-F80000.svg?style=for-the-badge&logo=oracle&logoColor=white' },
-    ],
-  },
-  {
-    title: 'Infra',
-    badges: [
-      { label: 'Docker', url: 'https://img.shields.io/badge/Docker-2496ED.svg?style=for-the-badge&logo=docker&logoColor=white' },
-      { label: 'Kubernetes', url: 'https://img.shields.io/badge/Kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white' },
-      { label: 'Apache', url: 'https://img.shields.io/badge/Apache-D22128.svg?style=for-the-badge&logo=apache&logoColor=white' },
-      { label: 'VirtualBox', url: 'https://img.shields.io/badge/VirtualBox-183A61.svg?style=for-the-badge&logo=virtualbox&logoColor=white' },
-    ],
-  },
-  {
-    title: 'Collaboration',
-    badges: [
-      { label: 'Jira', url: 'https://img.shields.io/badge/Jira-0052CC.svg?style=for-the-badge&logo=jira&logoColor=white' },
-      { label: 'Notion', url: 'https://img.shields.io/badge/Notion-F3F3F3.svg?style=for-the-badge&logo=notion&logoColor=black' },
-      { label: 'Colab', url: 'https://img.shields.io/badge/Colab-F9AB00.svg?style=for-the-badge&logo=googlecolab&logoColor=black' },
-      { label: 'Photoshop', url: 'https://img.shields.io/badge/Adobe%20Photoshop-08253c.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=37abff' },
-    ],
-  },
-];
-
-function BadgeGrid({ badges }) {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const imgs = ref.current?.querySelectorAll('img') ?? [];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    imgs.forEach((img) => observer.observe(img));
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div className="tech-grid" ref={ref}>
-      {badges.map((b) => (
-        <img key={b.label} src={b.url} alt={b.label} />
-      ))}
-    </div>
-  );
+function hideOnError(e) {
+  e.target.style.visibility = 'hidden';
 }
 
 export default function TechStack() {
   return (
-    <section id="techstack">
-      <div className="tech-section">
-        <h1>Tech Stack</h1>
-        {TECH_CATEGORIES.map((cat) => (
-          <div key={cat.title}>
-            <h3 className="tech-subtitle">{cat.title}</h3>
-            <BadgeGrid badges={cat.badges} />
-          </div>
-        ))}
-      </div>
-      <div className="tech-section">
-        <h1>Tools &amp; Resources</h1>
-        {TOOL_CATEGORIES.map((cat) => (
-          <div key={cat.title}>
-            <h3 className="tech-subtitle">{cat.title}</h3>
-            <BadgeGrid badges={cat.badges} />
+    <section id="techstack" data-reveal>
+      <h1>Tech Stack</h1>
+      <div className="skill-grid" data-reveal="stagger">
+        {SKILLS.map(({ cat, accent, items }) => (
+          <div key={cat} className="skill-group" style={{ '--accent': accent }}>
+            <div className="skill-cat">{cat}</div>
+            <ul className="skill-list">
+              {items.map(({ name, icon }) => (
+                <li key={name} className="skill-item">
+                  {icon
+                    ? <img
+                        className="skill-icon"
+                        src={`${CDN}/${icon}/ffffff`}
+                        alt={name}
+                        width="14"
+                        height="14"
+                        onError={hideOnError}
+                      />
+                    : <span className="skill-icon-dot" />
+                  }
+                  <span className="skill-name">{name}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
