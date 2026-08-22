@@ -1,68 +1,57 @@
 import { useLang } from '../contexts/LangContext';
 
+const EMPLOYMENT = [
+  {
+    title: 'SRP인포텍', titleEn: 'SRP Infotech',
+    role: '풀스택 개발자', roleEn: 'Full-Stack Developer',
+    period: '2026.08 — 재직중', periodEn: '2026.08 — Present',
+    desc: '웹 기반 ERP 신규 기능 개발 및 운영 유지보수 담당',
+    descEn: 'Developing new features and maintaining a web-based ERP system',
+  },
+];
+
 const IT = [
   {
     title: '2026 JAVA 웹 풀스택 과정', titleEn: '2026 JAVA Web Full-Stack Course',
     period: '2026.05 — 07',
-    desc: 'Java 기반 웹 풀스택 개발 과정 수강 중',
-    descEn: 'Currently enrolled in a Java-based web full-stack development course',
+    desc: 'Java 기반 백엔드·프론트엔드 통합 풀스택 개발 트레이닝',
+    descEn: 'Full-stack development training covering Java backend and frontend integration',
   },
   {
     title: 'HDF IPD', titleEn: 'HDF IPD',
     period: '2025.10 — 12',
-    desc: '기업 연계 프로젝트 수업 — 실제 기업과 협업해 문제 정의 및 해결',
-    descEn: 'Company-linked project course — collaborated with real companies to define and solve problems',
+    desc: '기업 연계 프로젝트 — 실제 비즈니스 요구사항 기반 문제 정의 및 해결',
+    descEn: 'Company-linked project — defined and solved problems based on real business requirements',
   },
   {
     title: 'Google AI Essentials', titleEn: 'Google AI Essentials',
     period: '2025.10',
-    desc: 'AI 기초 모델 이해 및 실습 프로젝트 수행',
-    descEn: 'AI foundational models and hands-on project experience',
+    desc: 'AI 파운데이션 모델 이해 및 실전 프로젝트 적용',
+    descEn: 'Applied foundational AI models to a hands-on project',
   },
   {
     title: 'H-BRIDGE Global CDP', titleEn: 'H-BRIDGE Global CDP',
     period: '2025.07',
-    desc: '글로벌 워크숍 및 국제 협업 프로젝트 참여',
-    descEn: 'Global workshops and international collaboration project',
+    desc: '글로벌 워크숍 기반 국제 협업 프로젝트 수행',
+    descEn: 'Led an international collaboration project through global workshops',
   },
   {
     title: 'HDF CPD', titleEn: 'HDF CPD',
     period: '2025.03 — 06',
-    desc: '다학제 프로그램 — 디자인·경영학과 학생들과 협업해 문제 정의 및 해결',
-    descEn: 'Multidisciplinary program — collaborated with design & business students',
+    desc: '디자인·경영 전공 팀과 협업해 문제 정의부터 해결까지 주도',
+    descEn: 'Cross-functional collaboration with design & business teams — led problem definition through resolution',
   },
   {
     title: '연구실 학부연구생', titleEn: 'Undergraduate Research Assistant',
     period: '2024.03 — 2025.02',
-    desc: '실험 보조 및 연구 환경 개선을 통한 프로젝트 지원',
-    descEn: 'Supported projects through experiment assistance and research environment improvement',
+    desc: '실험 설계 지원 및 연구 환경 개선으로 프로젝트 진행에 기여',
+    descEn: 'Contributed to project progress through experiment support and research environment improvements',
   },
   {
     title: 'IT-UP SQL 기반 데이터 분석 실습', titleEn: 'IT-UP SQL Data Analysis Course',
     period: '2024.06 — 07',
-    desc: 'SQL을 활용한 데이터 처리 및 분석 실습',
-    descEn: 'Hands-on data processing and analysis using SQL',
-  },
-];
-
-const PART_TIME = [
-  {
-    title: '뚜레쥬르', titleEn: 'Tous Les Jours',
-    period: '2025.05 — 2026.02',
-    desc: '재고·유통기한·진열 기준화로 서비스 품질 유지',
-    descEn: 'Maintained service quality by standardizing inventory and display',
-  },
-  {
-    title: '롯데리아', titleEn: 'Lotteria',
-    period: '2022.03 — 2023.06',
-    desc: '키오스크·포스·마감 운영을 통한 시스템 이해도 향상',
-    descEn: 'System understanding via kiosk, POS, and closing operations',
-  },
-  {
-    title: '피자몰 뷔페', titleEn: 'Pizza Mall Buffet',
-    period: '2021.12 — 2024.02',
-    desc: '조리 흐름 전반 운영 및 매장 지원',
-    descEn: 'Overall food preparation operations and store support',
+    desc: 'SQL 기반 대용량 데이터 처리 및 분석 수행',
+    descEn: 'SQL-based large-scale data processing and analysis',
   },
 ];
 
@@ -72,22 +61,25 @@ export default function Experience() {
   return (
     <section id="experience" data-reveal>
       <h1>Experience</h1>
-      <div className="exp-grid" data-reveal="stagger">
+      <div className="exp-grid exp-grid-single" data-reveal="stagger">
         <div className="exp-col">
-          <div className="exp-col-label">{lang === 'ko' ? 'Dev & Activities' : 'Dev & Activities'}</div>
-          {IT.map(e => (
+          <div className="exp-col-label">EMPLOYMENT</div>
+          {EMPLOYMENT.map(e => (
             <div className="exp-row" key={e.title}>
-              <div className="exp-period">{e.period}</div>
+              <div className="exp-period">{lang === 'ko' ? e.period : e.periodEn}</div>
               <div className="exp-body">
-                <div className="exp-name">{lang === 'ko' ? e.title : e.titleEn}</div>
+                <div className="exp-name">
+                  {lang === 'ko' ? e.title : e.titleEn}
+                  <span className="exp-role">{lang === 'ko' ? e.role : e.roleEn}</span>
+                </div>
                 <div className="exp-desc">{lang === 'ko' ? e.desc : e.descEn}</div>
               </div>
             </div>
           ))}
         </div>
-        <div className="exp-col">
-          <div className="exp-col-label">{lang === 'ko' ? 'Part-time' : 'Part-time'}</div>
-          {PART_TIME.map(e => (
+        <div className="exp-col exp-col-secondary">
+          <div className="exp-col-label">DEVELOPMENT</div>
+          {IT.map(e => (
             <div className="exp-row" key={e.title}>
               <div className="exp-period">{e.period}</div>
               <div className="exp-body">

@@ -8,6 +8,26 @@
   text-align: left;
 }
 
+.exp-grid-single {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+.exp-col-secondary {
+  margin-top: 36px;
+}
+
+.exp-role {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #388bfd;
+  margin-left: 8px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  letter-spacing: 0.02em;
+}
+
+body.light-mode .exp-role { color: #0969da; }
+
 .exp-col-label {
   font-size: 0.72rem;
   font-weight: 700;

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const STACK = ['Java', 'Spring Boot', 'React', 'Flutter', 'Python'];
 
-const STAT_TARGETS = [6, 7, 5];
+const STAT_TARGETS = [5, 7, 5];
 const STAT_LABELS = [
   { ko: '프로젝트', en: 'Projects' },
   { ko: '수상',     en: 'Awards' },
@@ -17,8 +17,8 @@ export default function Hero() {
   const [counts, setCounts] = useState([0, 0, 0]);
 
   const fullText = lang === 'ko'
-    ? '무엇이든 겪어보고 성장하는 것을 좋아합니다.'
-    : 'I grow by experiencing everything firsthand.';
+    ? '요구사항을 실제 동작하는 서비스로 만드는 백엔드 중심 풀스택 개발자입니다.'
+    : 'A backend-focused full-stack developer who turns requirements into working services.';
 
   // 타이핑 애니메이션
   useEffect(() => {
@@ -74,9 +74,13 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="hero-inner">
+        <div className="hero-status">
+          <span className="hero-status-dot" />
+          {lang === 'ko' ? '풀스택 개발자로 재직 중' : 'Currently working as a Full-Stack Developer'}
+        </div>
         <div className="hero-eyebrow">Backend · Full-Stack Developer</div>
         <h1 className="hero-name">
-          {lang === 'ko' ? '이 영 흔' : 'Yeong Heun Lee'}
+          {lang === 'ko' ? '이 영 흔' : 'Ellie Lee'}
         </h1>
         <div className="hero-stats">
           {STAT_TARGETS.map((_, i) => (
@@ -98,6 +102,11 @@ export default function Hero() {
         <a href="#projects" className="hero-cta">
           {lang === 'ko' ? '프로젝트 보기' : 'View Projects'} <span aria-hidden="true">→</span>
         </a>
+        <div className="hero-links">
+          <a href="mailto:2yeongheun@gmail.com">Email ↗</a>
+          <a href="https://github.com/eongeung" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://velog.io/@0nee/posts" target="_blank" rel="noreferrer">Blog ↗</a>
+        </div>
       </div>
       <div className="hero-scroll">
         <div className="hero-scroll-bar" />

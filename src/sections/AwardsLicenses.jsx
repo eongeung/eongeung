@@ -88,7 +88,9 @@ export default function AwardsLicenses() {
                   <div className="award-title">{lang === 'ko' ? a.title : a.titleEn}</div>
                   <div className="award-sub">{lang === 'ko' ? a.sub : a.subEn}</div>
                 </div>
-                <div className="award-role">{lang === 'ko' ? a.role : a.roleEn}</div>
+                {a.role !== '-' && (
+                  <div className="award-role">{lang === 'ko' ? a.role : a.roleEn}</div>
+                )}
               </div>
             ))}
           </div>
