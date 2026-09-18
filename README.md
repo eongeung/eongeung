@@ -13,6 +13,15 @@
 ![Flutter](https://img.shields.io/badge/Flutter-02569B.svg?style=for-the-badge&logo=flutter&logoColor=white) 
 ---
 
+### 🌳 Pixel Garden
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tree-dark.svg">
+    <img src="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tree-light.svg" alt="pixel garden" width="432">
+  </picture>
+</p>
+
 ### 📊 GitHub Stats
 
 <p align="center">
