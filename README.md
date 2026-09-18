@@ -36,7 +36,6 @@
 | **PawPaw** | 풀스택 | 반려동물 종합 플랫폼 |
 | **Frankly** | 백엔드 | 익명 커뮤니티 REST API |
 | **AeroPick** | 앱 · 백엔드 · HW 연동 | 공항 체험형 모션 인식 가챠 시스템 |
-| **MotoWallet** | 앱 | 자율주행 모빌리티 결제 시스템 |
 
 ## 🛠 Tech Stack
 
@@ -44,7 +43,5 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat-square&logo=amazonwebservices&logoColor=white)
