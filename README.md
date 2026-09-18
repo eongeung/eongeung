@@ -20,6 +20,10 @@
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tree-dark.svg">
     <img src="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tree-light.svg" alt="pixel garden" width="432">
   </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tank-dark.svg">
+    <img src="https://raw.githubusercontent.com/eongeung/profile-garden/main/dist/tank-light.svg" alt="pixel aquarium" width="432">
+  </picture>
 </p>
 
 ### 📊 GitHub Stats
