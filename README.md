@@ -28,15 +28,6 @@
 
 </div>
 
-## 📌 Projects
-
-| 프로젝트 | 역할 | 한 줄 소개 |
-| --- | --- | --- |
-| **Univ-US** | 풀스택 · PL | 대학 ERP · LMS · 커뮤니티 통합 플랫폼 |
-| **PawPaw** | 풀스택 | 반려동물 종합 플랫폼 |
-| **Frankly** | 백엔드 | 익명 커뮤니티 REST API |
-| **AeroPick** | 앱 · 백엔드 · HW 연동 | 공항 체험형 모션 인식 가챠 시스템 |
-
 ## 🛠 Tech Stack
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
