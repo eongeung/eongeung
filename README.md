@@ -45,16 +45,21 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
 ![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square&logo=hibernate&logoColor=white)
-![MyBatis](https://img.shields.io/badge/MyBatis-D33A2C?style=flat-square)
 ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+
+**Enterprise**
+
+![Java 8](https://img.shields.io/badge/Java_8-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![JSP](https://img.shields.io/badge/JSP-4B7BBE?style=flat-square)
+![Servlet](https://img.shields.io/badge/Servlet-2E6DB4?style=flat-square)
+![WebSquare](https://img.shields.io/badge/WebSquare-0B5FFF?style=flat-square)
+![JasperReports](https://img.shields.io/badge/JasperReports-CC0000?style=flat-square)
 
 **Frontend · Mobile**
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
 
