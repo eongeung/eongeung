@@ -1,20 +1,12 @@
 import { useLang } from '../contexts/LangContext';
 import { useState, useEffect } from 'react';
 
-const STACK = ['Java', 'Spring Boot', 'React', 'Flutter', 'Python'];
-
-const STAT_TARGETS = [5, 7, 5];
-const STAT_LABELS = [
-  { ko: '프로젝트', en: 'Projects' },
-  { ko: '수상',     en: 'Awards' },
-  { ko: '자격증',   en: 'Licenses' },
-];
+const STACK = ['Java', 'Spring Boot', 'Oracle', 'React', 'AWS'];
 
 export default function Hero() {
   const { lang } = useLang();
   const [displayed, setDisplayed] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const [counts, setCounts] = useState([0, 0, 0]);
 
   const fullText = lang === 'ko'
     ? '요구사항을 실제 동작하는 서비스로 만드는 백엔드 중심 풀스택 개발자입니다.'
@@ -54,25 +46,9 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // 카운트업
-  useEffect(() => {
-    const timers = STAT_TARGETS.map((target, i) => {
-      let c = 0;
-      const delay = setTimeout(() => {
-        const t = setInterval(() => {
-          c++;
-          setCounts(prev => { const n = [...prev]; n[i] = c; return n; });
-          if (c >= target) clearInterval(t);
-        }, 80);
-        return () => clearInterval(t);
-      }, 600 + i * 120);
-      return delay;
-    });
-    return () => timers.forEach(clearTimeout);
-  }, []);
-
   return (
     <div className="hero">
+      <div className="hero-grid" aria-hidden="true" />
       <div className="hero-inner">
         <div className="hero-status">
           <span className="hero-status-dot" />
@@ -82,14 +58,6 @@ export default function Hero() {
         <h1 className="hero-name">
           {lang === 'ko' ? '이 영 흔' : 'Ellie Lee'}
         </h1>
-        <div className="hero-stats">
-          {STAT_TARGETS.map((_, i) => (
-            <div key={i} className="hero-stat">
-              <span className="hero-stat-num">{counts[i]}</span>
-              <span className="hero-stat-label">{STAT_LABELS[i][lang]}</span>
-            </div>
-          ))}
-        </div>
         <p className="hero-tagline">
           {displayed}
           <span className="hero-cursor" style={{ opacity: showCursor ? 1 : 0 }}>|</span>
@@ -105,7 +73,7 @@ export default function Hero() {
         <div className="hero-links">
           <a href="mailto:2yeongheun@gmail.com">Email ↗</a>
           <a href="https://github.com/eongeung" target="_blank" rel="noreferrer">GitHub ↗</a>
-          <a href="https://velog.io/@0nee/posts" target="_blank" rel="noreferrer">Blog ↗</a>
+          <a href="https://eong-tory.tistory.com/" target="_blank" rel="noreferrer">Blog ↗</a>
         </div>
       </div>
       <div className="hero-scroll">

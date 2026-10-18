@@ -75,6 +75,18 @@ body.light-mode .exp-role { color: #0969da; }
   line-height: 1.55;
 }
 
+.exp-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 4px 0 28px;
+  margin-left: 134px;
+}
+
+@media (max-width: 768px) {
+  .exp-detail { margin-left: 0; }
+}
+
 /* ===== Awards & Licenses 2-column ===== */
 .al-grid {
   display: grid;
@@ -165,6 +177,92 @@ body.light-mode .exp-role { color: #0969da; }
   display: flex;
   flex-direction: column;
 }
+
+.license-list-single {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.license-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  transition: border-color 0.18s, transform 0.18s, background 0.18s;
+}
+
+.license-card:hover {
+  border-color: rgba(56, 139, 253, 0.45);
+  background: rgba(56, 139, 253, 0.05);
+  transform: translateY(-2px);
+}
+
+.license-card .license-badge {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(56, 139, 253, 0.1);
+  border: 1px solid rgba(56, 139, 253, 0.25);
+  color: #79c0ff;
+  font-size: 0.62rem;
+}
+
+.license-card .license-body { min-width: 0; }
+
+.license-card .license-name {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 3px;
+}
+
+.license-card .license-desc {
+  font-size: 0.82rem;
+  color: #a0adb8;
+  margin-bottom: 6px;
+}
+
+.license-card .license-issuer {
+  font-size: 0.68rem;
+  color: #6e7681;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+@media (max-width: 560px) {
+  .license-grid { grid-template-columns: 1fr; }
+}
+
+body.light-mode .license-card {
+  background: #ffffff;
+  border-color: #d0d7de;
+}
+body.light-mode .license-card:hover {
+  border-color: rgba(9, 105, 218, 0.4);
+  background: rgba(9, 105, 218, 0.04);
+}
+body.light-mode .license-card .license-badge {
+  background: rgba(9, 105, 218, 0.08);
+  border-color: rgba(9, 105, 218, 0.25);
+  color: #0969da;
+}
+body.light-mode .license-card .license-name { color: #1f2328; }
+body.light-mode .license-card .license-desc { color: #57606a; }
+body.light-mode .license-card .license-issuer { color: #8b949e; }
 
 .license-row {
   display: grid;

@@ -45,10 +45,10 @@ function Main() {
         <Hero />
         <div className="main-content">
           <About />
+          <Experience />
           <Projects />
           <TechStack />
           <AwardsLicenses />
-          <Experience />
           <Contact />
         </div>
         <ScrollToTop />

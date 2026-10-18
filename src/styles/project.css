@@ -545,7 +545,8 @@ body.dark-mode .proj-github-btn:hover {
   text-align: left;
 }
 
-.modal-title::after { display: none; }
+.modal-title::after,
+.modal-title::before { display: none; }
 
 .modal-subtitle {
   font-size: 0.85rem;

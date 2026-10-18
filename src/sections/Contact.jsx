@@ -12,9 +12,9 @@ export default function Contact() {
           <span className="contact-label">GitHub</span>
           <span className="contact-val">github.com/eongeung ↗</span>
         </a>
-        <a className="contact-row" href="https://velog.io/@0nee/posts" target="_blank" rel="noreferrer">
+        <a className="contact-row" href="https://eong-tory.tistory.com/" target="_blank" rel="noreferrer">
           <span className="contact-label">Blog</span>
-          <span className="contact-val">velog.io/@0nee ↗</span>
+          <span className="contact-val">eong-tory.tistory.com ↗</span>
         </a>
       </div>
     </section>

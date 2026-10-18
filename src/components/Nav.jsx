@@ -3,9 +3,9 @@ import { useTheme } from '../contexts/ThemeContext';
 
 const LINKS = [
   { id: 'about',      label: 'About' },
+  { id: 'experience', label: 'Exp' },
   { id: 'projects',   label: 'Projects' },
   { id: 'techstack',  label: 'Stack' },
-  { id: 'experience', label: 'Exp' },
   { id: 'contact',    label: 'Contact' },
 ];
 
